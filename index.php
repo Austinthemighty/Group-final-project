@@ -114,7 +114,7 @@ catch(Exception $e) {
             <img src="http://download.intel.com/newsroom/kits/idf/2013_fall/gallery/images/IvyTown_Package.jpg" alt="Image" style="height: 450px;width: 450px; ">
             <div class="carousel-caption">
                 <h3>Xeon Processor</h3>
-                <p>30M cache, 2.70GHz</p>
+                <p>30M cache, 2.70GHz, 12 cores</p>
             </div>
         </div>
 
@@ -123,6 +123,27 @@ catch(Exception $e) {
             <div class="carousel-caption">
                 <h3>Fitbit Flex Wireless Wristband</h3>
                 <p> Count the steps taken everyday.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images\iPhone-Family_US-EN-PRINT.png" alt="Image" style="height: 450px;width: 450px;">
+            <div class="carousel-caption">
+                <h3>iPhone</h3>
+                <p>The iPhone Family</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images\iPadPro10-Lineup_PR-PRINT.png" alt="Image" style="height: 450px;width: 450px;">
+            <div class="carousel-caption">
+                <h3>iPad</h3>
+                <p>The iPad Family</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images\Watch_Complications_Hero-PRINT.png" alt="Image" style="height: 450px;width: 450px;">
+            <div class="carousel-caption">
+                <h3>The Apple Watch</h3>
+                <p>The Most Personal Apple Device</p>
             </div>
         </div>
     </div>
