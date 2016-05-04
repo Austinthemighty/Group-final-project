@@ -1,13 +1,6 @@
 <?php
 
-try {
-    $dbh = new PDO('mysql:host=localhost;dbname=subscriptdb','root','root');
-}
-
-catch(Exception $e) {
-
-    echo "hello";
-}
+require_once('connect.php');
 
 ?>
 
