@@ -3,7 +3,7 @@
 /*** mysql hostname ***/
 $db_hostname = 'localhost';
 
-/*** mysql hostname ***/
+/*** mysql db name ***/
 $db_name = 'e-box';
 
 /*** mysql username ***/
