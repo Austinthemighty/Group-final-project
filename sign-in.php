@@ -1,7 +1,7 @@
 <?php
-require_once('include/connect.php');
+require_once('connect.php');
 $title = 'Sign In';
-require_once('structure/header.php');
+require_once('header.php');
 // Start the session
 session_start();
 
@@ -12,7 +12,7 @@ $error_msg = "";
 if (!isset($_SESSION['user_id'])) {
     if (isset($_POST['submit'])) {
         // Connect to the database
-        $dbh = new PDO("mysql:host=$db_hostname;dbname=sidekick", $db_username, $db_password);
+        $dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
 
         // Grab the user-entered log-in data
         $user_username = trim($_POST['username']);

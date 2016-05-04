@@ -1,7 +1,7 @@
 <?php
     $title = 'Sign Up';
-    require_once('include/connect.php');
-    require_once('structure/header.php');
+    require_once('connect.php');
+    require_once('header.php');
 
     if (isset($_POST['submit'])) {
         // Grab the profile data from the POST
@@ -11,7 +11,7 @@
 
         if (!empty($username) && !empty($password1) && !empty($password2) && ($password1 == $password2)) {
             // Connect to the database
-            $dbh = new PDO("mysql:host=$db_hostname;dbname=sidekick", $db_username, $db_password);
+            $dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
 
             // Make sure someone isn't already registered using this username
             $query = "SELECT * FROM user WHERE username = :username";
