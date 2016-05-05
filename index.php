@@ -58,7 +58,7 @@ require_once('connect.php');
             <li><a href="#">About</a>
                 <ul>
                     <li><a href="#">About Company</a></li>
-                    <li><a href="admin.php">Admin</a></li>
+                    <li><a href="products.php">Admin</a></li>
                     <li><a href="#">Developers</a></li>
                 </ul>
             </li>

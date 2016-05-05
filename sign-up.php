@@ -1,5 +1,7 @@
 <?php
-    $title = 'Sign Up';
+
+session_start();
+   /* $title = 'Sign Up';
     require_once('connect.php');
     require_once('header.php');
 
@@ -44,6 +46,7 @@
             echo '<p class="error">You must enter all of the sign-up data, including the desired password twice.</p>';
         }
     }
+   */
     ?>
 
 
@@ -56,3 +59,8 @@
         <input type="password" id="password2" name="password2" /><br />
     <input type="submit" value="Sign Up" name="submit" />
 </form>
+
+<?php
+
+echo "<p>hello, ". $_SESSION['user_id'] . "</p>";
+?>
