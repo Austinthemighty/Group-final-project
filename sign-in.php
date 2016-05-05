@@ -84,4 +84,4 @@ else {
 <?php
 // Insert the page footer
 //require_once('footer.php');
-?> 
+?>

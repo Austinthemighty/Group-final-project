@@ -43,10 +43,10 @@ require_once('connect.php');
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="about.php">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Work</a></li>
-        <li><a href="#">Register</a></li>
+        <li><a href="sign-up.php">Register</a></li>
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
@@ -64,17 +64,17 @@ require_once('connect.php');
             </li>
             <li><a href="#">Services</a>
                 <ul>
-                    <li><a href="https://www.google.hr/">Science</a></li>
+                    <li><a href="#">Science</a></li>
                     <li><a href="#">Technology</a></li>
                     <li><a href="#">Engineering</a></li>
                     <li><a href="#">Arts</a></li>
                     <li><a href="#">Mathematics</a></li>
                 </ul>
             </li>
-            <li><a href="#">Register</a>
+            <li><a href="sign-up.php">Register</a>
                 <ul>
-                    <li><a href="#">Log-in</a></li>
-                    <li><a href="#">Sign-Up</a></li>
+                    <li><a href="sign-in.php">Log-in</a></li>
+                    <li><a href="sign-up.php">Sign-Up</a></li>
                 </ul>
             </li>
             <div class="social">
