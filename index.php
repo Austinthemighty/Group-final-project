@@ -46,7 +46,7 @@ require_once('connect.php');
         <li><a href="about.php">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Work</a></li>
-        <li><a href="sign-up.php">Register</a></li>
+        <li><a href="sign-up.php">Profile</a></li>
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
@@ -71,7 +71,7 @@ require_once('connect.php');
                     <li><a href="#">Mathematics</a></li>
                 </ul>
             </li>
-            <li><a href="sign-up.php">Register</a>
+            <li><a href="sign-up.php">Profile</a>
                 <ul>
                     <li><a href="sign-in.php">Log-in</a></li>
                     <li><a href="sign-up.php">Sign-Up</a></li>
