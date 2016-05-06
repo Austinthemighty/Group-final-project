@@ -113,7 +113,7 @@
     <div class="col-sm-4">
       <p class="text-center"><strong>Carlos</strong></p><br>
       <a href="#demo" data-toggle="collapse">
-        <img src="http://www.roofingexpertmiami.com/wp-content/uploads/2012/01/Mexican-Guy-eecue_27884_3rxb_l.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
       <div id="demo" class="collapse">
         <p></p>
@@ -124,7 +124,7 @@
     <div class="col-sm-4">
       <p class="text-center"><strong>Angel</strong></p><br>
       <a href="#demo2" data-toggle="collapse">
-        <img src="https://s-media-cache-ak0.pinimg.com/236x/cf/52/27/cf522726aa394158742fefc2c08fc400.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
       <div id="demo2" class="collapse">
         <p></p>
@@ -133,31 +133,21 @@
       </div>
     </div>
     <div class="col-sm-4">
-      <p class="text-center"><strong>austin</strong></p><br>
-      <a href="#demo3" data-toggle="collapse">
-        <img src="http://i.imgur.com/Lq8OxHE.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      <p class="text-center"><strong>Austin</strong></p><br>
+      <a href="#demo4" data-toggle="collapse">
+        <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
-      <div id="demo3" class="collapse">
+      <div id="demo4" class="collapse">
         <p></p>
         <p></p>
         <p>Member since 2016</p>
       </div>
     </div>
- <div class="col-sm-4">
-      <p class="text-center"><strong></strong></p><br>
-      <a href="#demo3" data-toggle="collapse">
-        <img  class="img-circle person"  width="255" height="255">
-      </a>
-      <div id="demo3" class="collapse">
-        <p></p>
-        <p></p>
-        <p>Member since 2016</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
+ <center>
+    <div class="col-sm-4 pagination-centered text-center">
       <p class="text-center"><strong>Tyler</strong></p><br>
       <a href="#demo3" data-toggle="collapse">
-        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSDELpG0iTi4LOTPLCkI5HjhC3nPEFk_ObXsB1HjVaucUdsU6jnvA" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
       <div id="demo3" class="collapse">
         <p></p>
@@ -165,7 +155,7 @@
         <p>Member since 2016</p>
       </div>
     </div>
-	
+ </center>
   </div>
 </div>
 		<div class="container-fluid text-center">
