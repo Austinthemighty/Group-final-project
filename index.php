@@ -62,13 +62,11 @@ require_once('connect.php');
                     <li><a href="#">Developers</a></li>
                 </ul>
             </li>
-            <li><a href="#">Services</a>
+            <li><a href="#">Subscriptions</a>
                 <ul>
-                    <li><a href="#">Science</a></li>
-                    <li><a href="#">Technology</a></li>
-                    <li><a href="#">Engineering</a></li>
-                    <li><a href="#">Arts</a></li>
-                    <li><a href="#">Mathematics</a></li>
+                    <li><a href="products.php">Small</a></li>
+                    <li><a href="products.php">Basic</a></li>
+                    <li><a href="products.php">Premium</a></li>
                 </ul>
             </li>
             <li><a href="sign-up.php">Profile</a>
