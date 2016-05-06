@@ -144,7 +144,7 @@
       </div>
     </div>
  <div class="col-sm-4">
-      <p class="text-center"><strong>austin</strong></p><br>
+      <p class="text-center"><strong></strong></p><br>
       <a href="#demo3" data-toggle="collapse">
         <img  class="img-circle person"  width="255" height="255">
       </a>
