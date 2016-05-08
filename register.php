@@ -35,7 +35,7 @@ if (isset($_POST['submit-sp'])) {
                 'email' => $email
             ));
             // Confirm success with the user
-            echo '<p>Your new account has been successfully created. You\'re now ready to <a href="sign_in.php">log in</a>.</p>';
+            echo '<p>Your new account has been successfully created. You\'re now ready to <a href="register.php">log in</a>.</p>';
             exit();
         }
         else {
@@ -61,14 +61,28 @@ if(isset($_POST['submit-ln'])){
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         //check if the user is real
-        $query = "SELECT * FROM user WHERE id = :id";
+        $query = "SELECT * FROM user WHERE email = :email";
         $stmt = $dbh->prepare($query);
-        $stmt->execute(array('id' => $id));
+        $stmt->execute(array('email' => $email));
         $result = $stmt->fetchAll();
         $count = $stmt->rowCount();
 
         //switch around the if else in the if with the $count var and use the true statement to set up a $_SESSION to save around the site
-
+        if($count == 1){
+            //session_start();
+            //here we assign the  entered username to be used to authorize the user to access a profile and
+                    $query = "SELECT * FROM user WHERE email = :email";
+                    $stmt=$dbh->prepare($query);
+                    $stmt->execute(array(
+                        'email' => $email
+                    ));
+                   /*here the  session is given the id value that was submittedf in the form*/
+                   //$_SESSION['email'] = $email;
+                   //session_destroy();
+            echo '<p>Hello there ' ./*$_SESSION['email'] */ $email. '</p>';
+        }
+    }else{
+        echo '<p>please enter all information please.</p>';
     }
 }
 //Log-in.php----
@@ -83,8 +97,14 @@ if(isset($_POST['submit-ln'])){
     <label for="email">Email:</label>
     <input type="text" id="email" name="email" value="<?php if (!empty($id)) echo $id; ?>" /><br />
     <label for="password">Password:</label>
-    <input type="password" id="password1" name="password1" /><br />
-    <input type="submit" value="Sign Up" name="submit-ln" />
+    <input type="password" id="password" name="password" /><br />
+    
+    
+    
+    <!--             Button here to send the people to their  profile page             -->
+
+    
+    <input type="submit" value="Log In" name="submit-ln" />
 </form>
 <!--Log-in HTML-->
             </td>
