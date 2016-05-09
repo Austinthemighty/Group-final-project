@@ -1,7 +1,7 @@
 	<?php
-
+	require_once('connect.php')
 	try {
-	$dbh = new PDO('mysql:host=localhost;dbname=subscriptdb','root','root');
+	$dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
 	}
 
 	catch(Exception $e) {

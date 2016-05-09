@@ -13,10 +13,11 @@
 ​
 <?php
 require_once ('authorize.php');
+require_once('connect.php')
 // Connect to the database
-$dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', '');
+$dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
 // Retrieve the score data from MySQL
-$query = "SELECT * FROM guitarwars ORDER BY score DESC, date ASC";
+$query = "SELECT * FROM users";
 $stmt = $dbh->prepare($query);
 $stmt->execute();
 $result = $stmt ->fetchAll();
@@ -24,18 +25,9 @@ $result = $stmt ->fetchAll();
 echo '<table>';
 foreach ($result as $row) {
     // Display the score data
-    echo '<tr class="scorerow"><td><strong>' . $row['name'] . '</strong></td>';
-    echo '<td>' . $row['date'] . '</td>';
-    echo '<td>' . $row['score'] . '</td>';
-    echo '<td><a href="removescore.php?id=' . $row['id'] . '&amp;date=' . $row['date'] .
-        '&amp;name=' . $row['name'] . '&amp;score=' . $row['score'] .
-        '&amp;screenshot=' . $row['screenshot'] . '">Remove</a>';
-    if($row['approved']== 0){
-        echo ' / <a href="approvescore.php?id=' . $row['id'] . '&amp;date=' . $row['date'] .
-            '&amp;name=' . $row['name'] . '&amp;score=' . $row['score'] .
-            '&amp;screenshot=' . $row['screenshot'] . '">Approve</a></>';
-    }
-    echo '</td></tr>';
+    echo '<tr class="scorerow"><td><strong>' . $row['email'] . '</strong></td>';
+    
+    echo '</tr>';
 }
 echo '</table>';
 ?>
