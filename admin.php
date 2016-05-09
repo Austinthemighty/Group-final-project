@@ -13,7 +13,7 @@
 ​
 <?php
 require_once ('authorize.php');
-require_once('connect.php')
+require_once('connect.php');
 // Connect to the database
 $dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
 // Retrieve the score data from MySQL

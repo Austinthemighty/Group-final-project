@@ -16,7 +16,7 @@ if (isset($_POST['submit-sp'])) {
 
     if (!empty($id) && !empty($password1) && !empty($email) && !empty($password2) && ($password1 == $password2)) {
         // Connect to the database
-        $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
+        $dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
 
         // Make sure someone isn't already registered using this username
         $query = "SELECT * FROM user WHERE id = :id";
