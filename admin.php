@@ -12,12 +12,13 @@
 <hr />
 ​
 <?php
+session_start(); 
 require_once ('authorize.php');
 require_once('connect.php');
 // Connect to the database
-$dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
+ $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 // Retrieve the score data from MySQL
-$query = "SELECT * FROM users";
+$query = "SELECT * FROM user";
 $stmt = $dbh->prepare($query);
 $stmt->execute();
 $result = $stmt ->fetchAll();
@@ -26,10 +27,11 @@ echo '<table>';
 foreach ($result as $row) {
     // Display the score data
     echo '<tr class="scorerow"><td><strong>' . $row['email'] . '</strong></td>';
-    
+    echo '<td class="username row"><strong>' . $row['id'] . '</strong></td>';
     echo '</tr>';
 }
 echo '</table>';
+echo '<p>' . $_SESSION['email']  . '</p>'
 ?>
 </body>
 </html>

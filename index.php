@@ -7,7 +7,6 @@ require_once('connect.php');
 
 <html>
 <head>
-    <title>E-box</title>
     <title>Ebox</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +18,7 @@ require_once('connect.php');
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+   
     <script>
         $(document).ready(function(){
             $(".button a").click(function(){
@@ -35,15 +35,18 @@ require_once('connect.php');
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
-
-<nav>
+<body style="background-color: #34B484;">
+    
+    <!--nav bar-->
+<nav style="background-color: #fff;">
     <ul>
-        <li><a href="index.php">Home</a></li>
+       <!-- <li><a href="index.php">Home</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Work</a></li>
-        <li><a href="sign-up.php">Profile</a></li>
+        <li><a href="#">Profile</a></li>
+-->
+       <li><a style="color: red;">COMPANY LOGO HERE</a></li>
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
@@ -66,10 +69,12 @@ require_once('connect.php');
                     <li><a href="products.php">Premium</a></li>
                 </ul>
             </li>
-            <li><a href="sign-up.php">Profile</a>
+            <li><a href="register.php">Profile</a>
                 <ul>
-                    <li><a href="sign-in.php">Log-in</a></li>
-                    <li><a href="sign-up.php">Sign-Up</a></li>
+                    <li><a href="register.php">Log-in/out</a></li>
+                    <!-- log out  function on this section for the  user-->
+                    
+                    <li><a href="register.php">Sign-Up</a></li>
                 </ul>
             </li>
             <div class="social">
@@ -91,6 +96,10 @@ require_once('connect.php');
             </div>
     </div>
 </div>
+    <!--nav bar-->
+
+    
+    
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -102,11 +111,11 @@ require_once('connect.php');
     </ol>
  
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox" style="background-color: #373B43;">
         <div class="item active">
             <img src="http://download.intel.com/newsroom/kits/idf/2013_fall/gallery/images/IvyTown_Package.jpg" alt="Image" style="height: 450px;width: 450px; ">
             <div class="carousel-caption">
-                <h3>Xeon Processor</h3>
+                <h3 style="color: red;">Fix Carousel</h3>
                 <p>30M cache, 2.70GHz, 12 cores</p>
             </div>
         </div>
@@ -153,8 +162,8 @@ require_once('connect.php');
 </div>
 
 <div class="container text-center">
-    <h3>What We Do</h3><br>
-    <div class="row">
+    <h3 style="color: red;">Picture here with the green hue on top</h3><br>
+    <div class="row" style="margin: inherit;">
         <div class="col-sm-4">
             <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
             <p>Current Project</p>
@@ -163,19 +172,11 @@ require_once('connect.php');
             <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
             <p>Project 2</p>
         </div>
-        <div class="col-sm-4">
-            <div class="well">
-                <p>Some text..</p>
-            </div>
-            <div class="well">
-                <p>Some text..</p>
-            </div>
-        </div>
     </div>
 </div><br>
 
-<footer class="container-fluid text-center">
-    <p>Footer Text</p>
+<footer class="container-fluid text-center" style="background-color: #373B43;border-bottom: 185px;border-bottom-color: #373B43;">
+    <p style="color: white;">Footer Text</p>
 </footer>
 
 </body>
