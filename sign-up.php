@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-   /* $title = 'Sign Up';
+    $title = 'Sign Up';
     require_once('connect.php');
     require_once('header.php');
 
@@ -16,9 +16,10 @@ session_start();
             $dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
 
             // Make sure someone isn't already registered using this username
-            $query = "SELECT * FROM user WHERE username = :username";
+            $query = "SELECT * FROM user WHERE username = :username, password = :password";
             $stmt = $dbh->prepare($query);
-            $stmt->execute(array('username' => $username));
+            $stmt->execute(array('username' => $username,
+            'password => $password'));
             $result = $stmt->fetchAll();
             $count = $stmt->rowCount();
 
@@ -46,7 +47,7 @@ session_start();
             echo '<p class="error">You must enter all of the sign-up data, including the desired password twice.</p>';
         }
     }
-   */
+
     ?>
 
 
