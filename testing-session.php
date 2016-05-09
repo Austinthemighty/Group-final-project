@@ -7,6 +7,8 @@
  */
 session_start();
 
-$_SESSION['user_id']='a';
+$_SESSION['user_id']='angel';
+
+session_destroy();
 
 ?>
