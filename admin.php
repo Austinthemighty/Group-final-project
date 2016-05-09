@@ -12,11 +12,11 @@
 <hr />
 ​
 <?php
-require_once('appvars.php');
-require_once('connectvars.php');
-require_once ('authorize.php');
+//require_once('appvars.php');
+//require_once('connectvars.php');
+//require_once ('authorize.php');
 // Connect to the database
-$dbh = new PDO('mysql:host=localhost;dbname=gwdb', 'root', 'root');
+$dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', '');
 // Retrieve the score data from MySQL
 $query = "SELECT * FROM guitarwars ORDER BY score DESC, date ASC";
 $stmt = $dbh->prepare($query);
