@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Guitar Wars - High Scores Administration</title>
+    <title>The E-box: Admin Page</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
@@ -12,9 +12,7 @@
 <hr />
 ​
 <?php
-//require_once('appvars.php');
-//require_once('connectvars.php');
-//require_once ('authorize.php');
+require_once ('authorize.php');
 // Connect to the database
 $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', '');
 // Retrieve the score data from MySQL
