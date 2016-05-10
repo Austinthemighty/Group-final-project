@@ -57,9 +57,8 @@ require_once('connect.php');
         <ul class="wrap-nav">
             <li><a href="#">About</a>
                 <ul>
-                    <li><a href="#">About Company</a></li>
+                    <li><a href="about.php">About Company</a></li>
                     <li><a href="products.php">Admin</a></li>
-                    <li><a href="#">Developers</a></li>
                 </ul>
             </li>
             <li><a href="#">Subscriptions</a>
