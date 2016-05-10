@@ -18,7 +18,8 @@ require_once('connect.php');
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-   
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
     <script>
         $(document).ready(function(){
             $(".button a").click(function(){
@@ -32,20 +33,21 @@ require_once('connect.php');
             open = false;
         });
     </script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
 </head>
 
 <body style="background-color: #34B484;">
     
-    <!--nav bar-->
 <nav style="background-color: #fff;">
     <ul>
-        <li><a href="index.php">Home</a></li>
+        
+        <li><img src="images\ebox.png" style="height: 50px; padding-top: 10px"></li>
+        <!--<li><a href="index.php">Home</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Work</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a style="color: red;">COMPANY LOGO HERE</a></li>
+        <li><a href="#">Profile</a></li>-->
+        
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
@@ -56,12 +58,12 @@ require_once('connect.php');
         <ul class="wrap-nav">
             <li><a href="#">About</a>
                 <ul>
-                    <li><a href="#">About Company</a></li>
+                    <li><a href="about.php">About Company</a></li>
                     <li><a href="products.php">Admin</a></li>
                     <li><a href="#">Developers</a></li>
                 </ul>
             </li>
-            <li><a href="#">Subscriptions</a>
+            <li><a href="products.html">Subscriptions</a>
                 <ul>
                     <li><a href="products.php">Small</a></li>
                     <li><a href="products.php">Basic</a></li>
