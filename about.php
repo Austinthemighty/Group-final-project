@@ -105,13 +105,13 @@
 	
 
 <div id="band" class="container text-center">
-  <h3>E BOX</h3>
+  <h3>E-BOX</h3>
   <p><em>Our company</em></p>
   <p>We have created a technology box subscription service. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   <br>
   <div class="row">
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Carlos</strong></p><br>
+    <div class="col-sm-3">
+      <p class="text-center"><strong>Angel</strong></p><br>
       <a href="#demo" data-toggle="collapse">
         <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
@@ -121,8 +121,8 @@
         <p>Member since 2016</p>
       </div>
     </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Angel</strong></p><br>
+    <div class="col-sm-3">
+      <p class="text-center"><strong>Austin</strong></p><br>
       <a href="#demo2" data-toggle="collapse">
         <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
@@ -132,8 +132,8 @@
         <p>Member since 2016</p>
       </div>
     </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Austin</strong></p><br>
+    <div class="col-sm-3">
+      <p class="text-center"><strong>Carlos</strong></p><br>
       <a href="#demo4" data-toggle="collapse">
         <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
@@ -144,7 +144,7 @@
       </div>
     </div>
  <center>
-    <div class="col-sm-4 pagination-centered text-center">
+    <div class="col-sm-3 pagination-centered text-center">
       <p class="text-center"><strong>Tyler</strong></p><br>
       <a href="#demo3" data-toggle="collapse">
         <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
