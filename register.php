@@ -18,7 +18,8 @@ if (isset($_POST['submit-sp'])) {
 
     if (!empty($id) && !empty($password1) && !empty($email) && !empty($password2) && ($password1 == $password2)) {
         // Connect to the database
-     $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
+        $dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
+
 
         // Make sure someone isn't already registered using this username
         $query = "SELECT * FROM user WHERE id = :id";
@@ -60,7 +61,7 @@ if(isset($_POST['submit-ln'])){
 
     if(!empty($email) && !empty($password)){
         //connection to database
-        $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
+        $dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
 
         //check if the user is real
         $query = "SELECT * FROM user WHERE email = :email";
@@ -195,71 +196,11 @@ if(isset($_POST['submit-ln'])){
 </head>
 <body>
     
-        <!--nav bar-->
-<nav style="background-color: #fff;">
-    <ul>
-       <!-- <li><a href="index.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Profile</a></li>
--->
-       <li><a style="color: red;">COMPANY LOGO HERE</a></li>
-    </ul>
-    <div class="button">
-        <a class="btn-open" href="#"></a>
-    </div>
-</nav>
-<div class="overlay">
-    <div class="wrap">
-        <ul class="wrap-nav">
-            <li><a href="#">About</a>
-                <ul>
-                    <li><a href="#">About Company</a></li>
-                    <li><a href="products.php">Admin</a></li>
-                    <li><a href="#">Developers</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Subscriptions</a>
-                <ul>
-                    <li><a href="products.php">Small</a></li>
-                    <li><a href="products.php">Basic</a></li>
-                    <li><a href="products.php">Premium</a></li>
-                </ul>
-            </li>
-            <li><a href="register.php">Profile</a>
-                <ul>
-                    <li><a href="register.php">Log-in/out</a></li>
-                    <!-- log out  function on this section for the  user-->
-                    
-                    <li><a href="register.php">Sign-Up</a></li>
-                </ul>
-            </li>
-            <div class="social">
-                <a href="#">
-                    <div class="social-icon">
-                        <i class="fa fa-facebook"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="social-icon">
-                        <i class="fa fa-twitter"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="social-icon">
-                        <i class="fa fa-codepen"></i>
-                    </div>
-                </a>
-            </div>
-    </div>
-</div>
-    <!--nav bar-->
-
 
     <table style="width:100%">
         <tr>
             <td>
+<div style="padding-left: 15%">
 <h1>Log-in</h1>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
     <label for="email">Email:</label>
@@ -293,6 +234,7 @@ if(isset($_POST['submit-ln'])){
             </td>
             </tr>
     </table>
+</div>
 </body>
 <!--Sign-up HTML-->
 <?php
