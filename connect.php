@@ -10,6 +10,6 @@ $db_name = 'e-box';
 $db_username = 'root';
 
 /*** mysql password ***/
-$db_password = '';
+$db_password = 'root';
 
 ?>
