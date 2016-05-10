@@ -7,7 +7,7 @@ require_once('connect.php');
 
 <html>
 <head>
-    <title>Ebox</title>
+    <title>E-Box</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -40,13 +40,12 @@ require_once('connect.php');
     <!--nav bar-->
 <nav style="background-color: #fff;">
     <ul>
-       <!-- <li><a href="index.php">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Work</a></li>
         <li><a href="#">Profile</a></li>
--->
-       <li><a style="color: red;">COMPANY LOGO HERE</a></li>
+        <li><a style="color: red;">COMPANY LOGO HERE</a></li>
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
