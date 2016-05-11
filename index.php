@@ -19,6 +19,15 @@ require_once('connect.php');
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style.css">
     
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
     <script>
         $(document).ready(function(){
             $(".button a").click(function(){
@@ -35,9 +44,9 @@ require_once('connect.php');
     
 </head>
 
-<body style="background-color: #34B484;">
+<body style="background-color: #000;">
     
-<nav style="background-color: #fff;">
+<nav style="background-color: #000;">
     <ul>
         
         <li><img src="images\ebox.png" style="height: 50px; padding-top: 10px"></li>
@@ -108,7 +117,7 @@ require_once('connect.php');
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox" >
     <div class="item active">
-      <img src="https://gotgame.com/wp-content/uploads/2013/01/Tegra4-ChipShotLowResolution-1024x683.jpg" style="height: 75%">
+      <img src="https://gotgame.com/wp-content/uploads/2013/01/Tegra4-ChipShotLowResolution-1024x683.jpg" style="height: 750px">
       <div class="carousel-caption">
         <h3></h3>
         <p></p>
@@ -116,7 +125,7 @@ require_once('connect.php');
     </div>
 
     <div class="item">
-      <img src="http://www.hardwareluxx.de/images/stories/galleries/reviews/2015/geforce-titanx/geforce-titanx-fazit-2.jpg" style="height: 75%">
+      <img src="http://www.hardwareluxx.de/images/stories/galleries/reviews/2015/geforce-titanx/geforce-titanx-fazit-2.jpg" style="height: 750px">
       <div class="carousel-caption">
         <h3></h3>
         <p></p>
@@ -124,7 +133,7 @@ require_once('connect.php');
     </div>
 
     <div class="item">
-      <img src="http://images.monoprice.com/productlargeimages/137885.jpg" style=" height: 75%">
+      <img src="http://images.monoprice.com/productlargeimages/137885.jpg" >
       <div class="carousel-caption" >
         <h3></h3>
         <p></p>
