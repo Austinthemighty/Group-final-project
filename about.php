@@ -6,7 +6,6 @@
 
 	catch(Exception $e) {
 
-	echo "hello";
 	}
 
 	?>
