@@ -133,7 +133,7 @@ require_once('connect.php');
     </div>
 
     <div class="item">
-      <img src="http://images.monoprice.com/productlargeimages/137885.jpg" >
+      <img src="http://images.monoprice.com/productlargeimages/137885.jpg" style=" height: 750px">
       <div class="carousel-caption" >
         <h3></h3>
         <p></p>
