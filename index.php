@@ -97,67 +97,50 @@ require_once('connect.php');
 </div>
     <!--nav bar-->
 
-    
-    
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-    </ol>
- 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox" style="background-color: #373B43;">
-        <div class="item active">
-            <img src="http://download.intel.com/newsroom/kits/idf/2013_fall/gallery/images/IvyTown_Package.jpg" alt="Image" style="height: 450px;width: 450px; ">
-            <div class="carousel-caption">
-                <h3 style="color: red;">Fix Carousel</h3>
-                <p>30M cache, 2.70GHz, 12 cores</p>
-            </div>
-        </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-        <div class="item">
-            <img src="http://i5.walmartimages.com/dfw/dce07b8c-63b5/k2-_8730fd38-d96f-4472-8173-315662688900.v1.jpg" alt="Image" style="height: 450px;width: 450px;">
-            <div class="carousel-caption">
-                <h3>Fitbit Flex Wireless Wristband</h3>
-                <p> Count the steps taken everyday.</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="images\iPhone-Family_US-EN-PRINT.png" alt="Image" style="height: 450px;width: 450px;">
-            <div class="carousel-caption">
-                <h3>iPhone</h3>
-                <p>The iPhone Family</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="images\iPadPro10-Lineup_PR-PRINT.png" alt="Image" style="height: 450px;width: 450px;">
-            <div class="carousel-caption">
-                <h3>iPad</h3>
-                <p>The iPad Family</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="images\Watch_Complications_Hero-PRINT.png" alt="Image" style="height: 450px;width: 450px;">
-            <div class="carousel-caption">
-                <h3>The Apple Watch</h3>
-                <p>The Most Personal Apple Device</p>
-            </div>
-        </div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" >
+    <div class="item active">
+      <img src="https://gotgame.com/wp-content/uploads/2013/01/Tegra4-ChipShotLowResolution-1024x683.jpg" style="height: 75%">
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div> 
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+    <div class="item">
+      <img src="http://www.hardwareluxx.de/images/stories/galleries/reviews/2015/geforce-titanx/geforce-titanx-fazit-2.jpg" style="height: 75%">
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div> 
+    </div>
+
+    <div class="item">
+      <img src="http://images.monoprice.com/productlargeimages/137885.jpg" style=" height: 75%">
+      <div class="carousel-caption" >
+        <h3></h3>
+        <p></p>
+      </div> 
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
 <div class="container text-center">
