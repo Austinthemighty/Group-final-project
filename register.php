@@ -168,7 +168,7 @@ if(isset($_POST['submit-ln'])){
     </div>
 </div>
 <!--Nav Bar-->
-
+<div style="padding-left: 10%">
 <!--Log-in HTML-->
     <table style="width:100%">
         <tr>
@@ -184,6 +184,7 @@ if(isset($_POST['submit-ln'])){
                 <!--Log-in HTML-->
             </td>
             <td>
+            
                 <!--Sign-up HTML-->
                 <h1>Sign-up</h1>
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" xmlns="http://www.w3.org/1999/html">
@@ -200,6 +201,7 @@ if(isset($_POST['submit-ln'])){
             </td>
         </tr>
     </table>
+</div>
 </body>
     <!--Sign-up HTML-->
 </html>
