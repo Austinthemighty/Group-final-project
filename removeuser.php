@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         // Delete the score data from the database
-        $query = "DELETE FROM user";
+        $query = "DELETE FROM guitarwars WHERE id = $id LIMIT 1";
         $stmt = $dbh->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll();
@@ -45,8 +45,8 @@ if (isset($_POST['submit'])) {
     }
 } else if (isset($id) && isset($email) && isset($password)) {
     echo '<p>Are you sure you want to delete the following profile?</p>';
-    echo '<p><strong>Name: </strong>' . $email . '<br /><strong>Date: </strong>' . $date .
-        '<br /><strong>Score: </strong>' . $score . '</p>';
+    echo '<p><strong>Name: </strong>' . $email . 
+        '<br /><strong>Password: </strong>' . $password . '</p>';
     echo '<form method="post" action="removeuser.php">';
     echo '<input type="radio" name="confirm" value="Yes" /> Yes ';
     echo '<input type="radio" name="confirm" value="No" checked="checked" /> No <br />';

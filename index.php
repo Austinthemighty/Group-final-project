@@ -64,14 +64,9 @@ require_once('connect.php');
 <div class="overlay">
     <div class="wrap">
         <ul class="wrap-nav">
-            <li><a href="#">About</a>
+            <li><a href="about.php">About</a>
                 <ul>
-<<<<<<< HEAD
-                    <li><a href=""">About Company</a></li>
-=======
-                    <li><a href="about.php">About Company</a></li>
->>>>>>> c2f5e49c54a15bb379807aff5d76ecf7bbb8cde8
-                    <li><a href="products.php">Admin</a></li>
+
                 </ul>
             </li>
             <li><a href="products.html">Subscriptions</a>

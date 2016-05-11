@@ -26,9 +26,9 @@ $result = $stmt ->fetchAll();
 echo '<table>';
 foreach ($result as $row) {
     // Display the score data
-    echo '<tr class="scorerow"><td><strong>' . $row['email'] . '</strong></td>';
-    echo '<td class="username row"><strong>' . $row['id'] . '</strong>';
-    echo '<td><a href="removeuser.php?id=' . $row['id']  . '&amp;email=' . $row['email'] . '&amp;score=' . $row['password'] .
+    echo '<tr class="username"><td><strong>' . $row['email'] . '</strong></td>';
+    echo '<td class="password row"><strong>' . $row['password'] . '</strong>';
+    echo '<td><a href="removeuser.php?id=' . $row['email']  . '&amp;email=' . $row['email'] . '&amp;score=' . $row['password'] .
         '&amp;screenshot=' . $row['screenshot'] . '">Remove</a>';
     echo '</td></tr>';
 }

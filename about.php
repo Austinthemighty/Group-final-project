@@ -6,7 +6,6 @@
 
 	catch(Exception $e) {
 
-	echo "hello";
 	}
 
 	?>
@@ -49,10 +48,7 @@
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Register</a></li>
+
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
@@ -77,10 +73,9 @@
                     <li><a href="#">Mathematics</a></li>
                 </ul>
             </li>
-            <li><a href="#">Register</a>
+            <li><a href="#">Profile</a>
                 <ul>
-                    <li><a href="#">Log-in</a></li>
-                    <li><a href="#">Sign-Up</a></li>
+
                 </ul>
             </li>
             <div class="social">
