@@ -20,6 +20,9 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
   
+  <script src="checkout.js"></script>
+  
+  
 </head>
 <body id="myPage" data-target=".navbar" data-offset="60">
 
@@ -107,7 +110,7 @@
         <div class="panel-footer">
           <h3>$19</h3>
           <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <button class="btn btn-lg" onclick="checkout(1)">Sign Up</button>
         </div>
       </div>      
     </div>     
@@ -126,7 +129,7 @@
         <div class="panel-footer">
           <h3>$29</h3>
           <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <button class="btn btn-lg" onclick="checkout(2)">Sign Up</button>
         </div>
       </div>      
     </div>       
@@ -145,7 +148,7 @@
         <div class="panel-footer">
           <h3>$49</h3>
           <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <button class="btn btn-lg" onclick="checkout(3)">Sign Up</button>
         </div>
       </div>      
     </div>    
