@@ -50,7 +50,7 @@
 <nav style="background-color: #000;">
     <ul>
         
-        <li><img src="images\ebox.png" style="height: 50px; padding-top: 10px"></li>
+        <li><img src="images\ebox.png" style="height: 50px; margin: 10px"></li>
         
     </ul>
     <div class="button">
