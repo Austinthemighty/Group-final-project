@@ -7,7 +7,7 @@ $title = 'Sign Up';
 require_once('connect.php');
 require_once('header.php');
 
-//Sign-up.php-----
+//-------------SIGN-UP.php-----------//
 if (isset($_POST['submit-sp'])) {
     // Grab the profile data from the POST
     $id = trim($_POST['id']);
@@ -22,7 +22,11 @@ if (isset($_POST['submit-sp'])) {
         // Make sure someone isn't already registered using this username
         $query = "SELECT * FROM user WHERE id = :id";
         $stmt = $dbh->prepare($query);
-        $stmt->execute(array('id' => $id));
+        $stmt->execute(array(
+            'id' => $id,
+            'password'=>  $password1,
+            'email' => $email
+        ));
         $result = $stmt->fetchAll();
         $count = $stmt->rowCount();
 
@@ -35,8 +39,11 @@ if (isset($_POST['submit-sp'])) {
                 'password'=>  $password1,
                 'email' => $email
             ));
+
+            $_SESSION['pass'] = $password1;
+
             // Confirm success with the user
-            echo '<p>Your new account has been successfully created. You\'re now ready to <a href="sign_in.php">log in</a>.</p>';
+            echo "<p>Your new account has been successfully ". $id ." created. You're now ready to <a href='register.php'>log in</a>.</p>";
             exit();
         }
         else {
@@ -51,27 +58,57 @@ if (isset($_POST['submit-sp'])) {
 }
 //Sign-up.php----
 
-//Log-in.php----
+
+//----------LOG-IN.php----
 if(isset($_POST['submit-ln'])){
     //grabbing profile data from the POST
     $email = trim($_POST['email']);
-    $password = trim($_POST['password']);
+    $password = trim($_POST['password1']);
 
-    if(!empty($email) && !empty($password)){
+    echo "<p>". $_POST['email'] ."</p>";
+    if(!empty($email) && !empty($password)) {
         //connection to database
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         //check if the user is real
         $query = "SELECT * FROM user WHERE id = :id";
         $stmt = $dbh->prepare($query);
-        $stmt->execute(array('id' => $id));
+        $stmt->execute(array(
+            'id' => $id
+        ));
         $result = $stmt->fetchAll();
         $count = $stmt->rowCount();
+
+        if ($count == 0) {
+            // The username is unique, so insert the data into the database
+            $query = "INSERT INTO user (email, password) VALUES (:email, SHA(:password1))";
+            $stmt = $dbh->prepare($query);
+            $stmt->execute(array(
+
+                'email' => $email,
+                'password' => $password1
+
+            ));
+
+            $_SESSION['pass'] = $password1;
+
+            // Confirm success with the user
+            echo "<p>You're signed in " . $email . ".</p>";
+            exit();
+        } else {
+            // An account already exists for this username, so display an error message
+            echo '<p class="error">Please enter all the information for proper log-in.</p>';
+            $id = "";
+        }
+    }
+    else {
+            echo"<p>No information inserted!</p>";
+        }
 
         //switch around the if else in the if with the $count var and use the true statement to set up a $_SESSION to save around the site
 
     }
-}
+
 //Log-in.php----
 ?>
 
@@ -130,10 +167,10 @@ if(isset($_POST['submit-ln'])){
             <li><a href="#">About</a>
                 <ul>
                     <li><a href="about.php">About Company</a></li>
-                    <li><a href="products.php">Admin</a></li>
+                    <li><a href="admin.php">Admin</a></li>
                 </ul>
             </li>
-            <li><a href="products.html">Subscriptions</a>
+            <li><a href="products.php">Subscriptions</a>
                 <ul>
                     <li><a href="products.php">Small</a></li>
                     <li><a href="products.php">Basic</a></li>
@@ -143,7 +180,7 @@ if(isset($_POST['submit-ln'])){
             <li><a href="register.php">Profile</a>
                 <ul>
                     <li><a href="register.php">Log-in/out</a></li>
-                    <!-- log out  function on this section for the  user-->
+                    <!-- log-out  function on this section for the  user-->
 
                     <li><a href="register.php">Sign-Up</a></li>
                 </ul>
@@ -178,7 +215,7 @@ if(isset($_POST['submit-ln'])){
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email" value="<?php if (!empty($id)) echo $id; ?>" /><br />
                     <label for="password">Password:</label>
-                    <input type="password" id="password1" name="password1" /><br />
+                    <input type="password" id="password" name="password1" /><br />
                     <input type="submit" value="Sign Up" name="submit-ln" />
                 </form>
                 <!--Log-in HTML-->
