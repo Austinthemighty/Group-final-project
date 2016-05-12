@@ -16,9 +16,9 @@ session_start();
 require_once ('authorize.php');
 require_once('connect.php');
 // Connect to the database
-$dbh = new PDO("mysql:host=$db_hostname;$db_name, $db_username, $db_password");
+$dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 // Retrieve the score data from MySQL
-$query = "SELECT * FROM user";
+$query = "SELECT * FROM user ORDER BY email";
 $stmt = $dbh->prepare($query);
 $stmt->execute();
 $result = $stmt ->fetchAll();
@@ -28,8 +28,8 @@ foreach ($result as $row) {
     // Display the score data
     echo '<tr class="username"><td><strong>' . $row['email'] . '</strong></td>';
     echo '<td class="password row"><strong>' . $row['password'] . '</strong>';
-    echo '<td><a href="removeuser.php?id=' . $row['email']  . '&amp;email=' . $row['email'] . '&amp;score=' . $row['password'] .
-        '&amp;screenshot=' . $row['screenshot'] . '">Remove</a>';
+    echo '<td><a href="removeuser.php?id=' . $row['email']  . '&amp;email=' . $row['email'] . '&amp;password=' . $row['password'] .
+       '">Remove</a>';
     echo '</td></tr>';
 }
 echo '</table>';
