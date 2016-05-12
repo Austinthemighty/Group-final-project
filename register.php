@@ -3,7 +3,7 @@
 
 session_start();
 
-$title = 'Sign Up';
+$title = 'Register';
 require_once('connect.php');
 require_once('header.php');
 
@@ -115,7 +115,7 @@ if(isset($_POST['submit-ln'])){
 <html>
 <!-------PHP------->
 <head>
-<title></title>
+<title>Register</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
