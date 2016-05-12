@@ -44,17 +44,12 @@ require_once('connect.php');
     
 </head>
 
-<body style="background-color: #000;">
+<body style="background-color: #000; color: lime;">
     
 <nav style="background-color: #000;">
     <ul>
         
         <li><img src="images\ebox.png" style="height: 50px; padding-top: 10px"></li>
-        <!--<li><a href="index.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Profile</a></li>-->
         
     </ul>
     <div class="button">
@@ -64,17 +59,17 @@ require_once('connect.php');
 <div class="overlay">
     <div class="wrap">
         <ul class="wrap-nav">
-            <li><a href="#">About</a>
+            <li><a href="about.php">About</a>
                 <ul>
                     <li><a href="about.php">About Company</a></li>
-                    <li><a href="products.php">Admin</a></li>
+                    <li><a href="admin.php">Admin</a></li>
                 </ul>
             </li>
-            <li><a href="products.html">Subscriptions</a>
+            <li><a href="products.php">Subscriptions</a>
                 <ul>
-                    <li><a href="products.php">Small</a></li>
-                    <li><a href="products.php">Basic</a></li>
-                    <li><a href="products.php">Premium</a></li>
+                    <li><a href="checkout.php#1">Small</a></li>
+                    <li><a href="checkout.php#2">Basic</a></li>
+                    <li><a href="checkout.php#3">Premium</a></li>
                 </ul>
             </li>
             <li><a href="register.php">Profile</a>
@@ -86,19 +81,14 @@ require_once('connect.php');
                 </ul>
             </li>
             <div class="social">
-                <a href="#">
+                <a href="http://www.vitamin-ha.com/wp-content/uploads/2013/05/Funny-Facebook-02.jpg">
                     <div class="social-icon">
                         <i class="fa fa-facebook"></i>
                     </div>
                 </a>
-                <a href="#">
+                <a href="http://rack.2.mshcdn.com/media/ZgkyMDE0LzA2LzAzLzM0L2Zha2V0d2l0dGVyLjVhOWM3LmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/3e70db58/31a/fake-twitter-thumb.jpg">
                     <div class="social-icon">
                         <i class="fa fa-twitter"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="social-icon">
-                        <i class="fa fa-codepen"></i>
                     </div>
                 </a>
             </div>
