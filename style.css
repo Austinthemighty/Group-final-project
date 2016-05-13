@@ -15,7 +15,6 @@ ul {
     background-color: #303030;
     margin:0;
     padding:0;
-    border-bottom: 50px;
     text-decoration:none;
     list-style:none;
 }
@@ -38,7 +37,6 @@ nav ul li {
     display:inline-block;
 }
 nav ul li a {
-    margin:10px;
 }
 nav ul li a {
     color:#333;
@@ -109,7 +107,7 @@ nav ul li a:hover {
     margin:0 auto;
 }
 .wrap ul.wrap-nav {
-    border-bottom:1px solid #575757;
+    border-bottom:px solid #575757;
     text-transform:capitalize;
     padding:150px 0px 100px;
 }
