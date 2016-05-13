@@ -44,9 +44,9 @@ require_once('connect.php');
     
 </head>
 
-<body style="background-color: #000; color: lime;">
+<body>
     
-<nav style="background-color: #000;">
+<nav>
     <ul>
         
         <li><img src="images\ebox.png" style="height: 50px; margin: 10px"></li>
