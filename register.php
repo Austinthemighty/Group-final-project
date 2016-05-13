@@ -20,7 +20,7 @@ if (isset($_POST['submit-sp'])) {
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         // Make sure someone isn't already registered using this username
-        $query = "SELECT * FROM user WHERE id = :id";
+        $query = "SELECT * FROM user WHERE id = :id, password = :password1, email = :email";
         $stmt = $dbh->prepare($query);
         $stmt->execute(array(
             'id' => $id,
@@ -65,7 +65,6 @@ if(isset($_POST['submit-ln'])){
     $email = trim($_POST['email']);
     $password = trim($_POST['password1']);
 
-    echo "<p>". $_POST['email'] ."</p>";
     if(!empty($email) && !empty($password)) {
         //connection to database
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
@@ -73,24 +72,20 @@ if(isset($_POST['submit-ln'])){
         //check if the user is real
         $query = "SELECT * FROM user WHERE id = :id";
         $stmt = $dbh->prepare($query);
-        $stmt->execute(array(
-            'id' => $id
-        ));
+        $stmt->execute();
         $result = $stmt->fetchAll();
         $count = $stmt->rowCount();
 
         if ($count == 0) {
             // The username is unique, so insert the data into the database
-            $query = "INSERT INTO user (email, password) VALUES (:email, SHA(:password1))";
+            $query = "SELECT * FROM user (email, password) VALUES (:email, SHA(:password1))";
             $stmt = $dbh->prepare($query);
             $stmt->execute(array(
-
                 'email' => $email,
                 'password' => $password1
-
             ));
 
-            $_SESSION['pass'] = $password1;
+            $_SESSION['email'] = $email;
 
             // Confirm success with the user
             echo "<p>You're signed in " . $email . ".</p>";
@@ -158,7 +153,7 @@ if(isset($_POST['submit-ln'])){
         <li><a href="#">Profile</a></li>-->
     </ul>
     <div class="button">
-        <a class="btn-open" href="#"></a>
+        <a class="btn-open" style="color: #e9e9e9;" href="#"></a>
     </div>
 </nav>
 <div class="overlay">
@@ -205,9 +200,14 @@ if(isset($_POST['submit-ln'])){
     </div>
 </div>
 <!--Nav Bar-->
-<div style="padding-left: 10%">
+
+
+<!---                                       REGISTER.PHP                                                             -->
+
+<center>
+<div>
 <!--Log-in HTML-->
-    <table style="width:100%">
+    <table id="regtab" style="border: 1px solid lightgrey">
         <tr>
             <td>
                 <h1>Log-in</h1>
@@ -239,6 +239,13 @@ if(isset($_POST['submit-ln'])){
         </tr>
     </table>
 </div>
+</center>
+
+
+
 </body>
+<footer class="container-fluid text-center" style="background-color: #373B43;margin-top: 273px;border-bottom: 7px solid #373B43;">
+    <p style="color: white;">Footer Text</p>
+</footer>
     <!--Sign-up HTML-->
 </html>
