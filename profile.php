@@ -6,3 +6,12 @@
  * Time: 4:13 PM
  */
 ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile</title>
+    </head>
+    <body>
+
+    </body>
+</html>
