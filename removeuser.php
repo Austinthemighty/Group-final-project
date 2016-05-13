@@ -45,14 +45,14 @@ if (isset($_POST['submit'])) {
     }
 } else if (isset($id) && isset($email) && isset($password)) {
     echo '<p>Are you sure you want to delete the following profile?</p>';
-    echo '<p><strong>Name: </strong>' . $email .
+    echo '<p><strong>E-mail: </strong>' . $email .
         '<br /><strong>Password: </strong>' . $password . '</p>';
     echo '<form method="post" action="removeuser.php">';
     echo '<input type="radio" name="confirm" value="Yes" /> Yes ';
     echo '<input type="radio" name="confirm" value="No" checked="checked" /> No <br />';
     echo '<input type="submit" value="Submit" name="submit" />';
     echo '<input type="hidden" name="id" value="' . $id . '" />';
-    echo '<input type="hidden" name="name" value="' . $email . '" />';
+    echo '<input type="hidden" name="email" value="' . $email . '" />';
     echo '<input type="hidden" name="password" value="' . $password . '" />';
     echo '</form>';
 };

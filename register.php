@@ -20,7 +20,7 @@ if (isset($_POST['submit-sp'])) {
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         // Make sure someone isn't already registered using this username
-        $query = "SELECT * FROM user WHERE id = :id";
+        $query = "SELECT * FROM user WHERE id = $id";
         $stmt = $dbh->prepare($query);
         $stmt->execute(array('id' => $id));
         $result = $stmt->fetchAll();
@@ -62,7 +62,7 @@ if(isset($_POST['submit-ln'])){
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         //check if the user is real
-        $query = "SELECT * FROM user WHERE id = :id";
+        $query = "SELECT * FROM user WHERE id = $id";
         $stmt = $dbh->prepare($query);
         $stmt->execute(array('id' => $id));
         $result = $stmt->fetchAll();
@@ -190,11 +190,11 @@ if(isset($_POST['submit-ln'])){
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" xmlns="http://www.w3.org/1999/html">
                     <label for="id">Username:</label>
                     <input type="text" id="id" name="id" value="<?php if (!empty($id)) echo $id; ?>" /><br />
-                    <label for="password">Password:</label>
+                    <label for="password1">Password:</label>
                     <input type="password" id="password1" name="password1" /><br />
                     <label for="password2">Password (retype):</label>
                     <input type="password" id="password2" name="password2" /><br />
-                    <label for="email">email:</label>
+                    <label for="email">Email:</label>
                     <input type="text" id="email" name="email" /></br>
                     <input type="submit" value="Sign Up" name="submit-sp" />
                 </form>
