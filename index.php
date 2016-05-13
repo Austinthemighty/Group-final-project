@@ -49,7 +49,7 @@ require_once('connect.php');
 <nav style="background-color: #000;">
     <ul>
         
-        <li><img src="images\ebox.png" style="height: 50px; padding-top: 10px"></li>
+        <li><a href="index.php"><img src="images\ebox.png" style="height: 50px; padding-top: 10px" ></a></li>
         <!--<li><a href="index.php">Home</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="#">Services</a></li>

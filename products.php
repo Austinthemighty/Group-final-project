@@ -26,13 +26,8 @@
 <nav style="background-color: #fff;">
     <ul>
         
-        <li><img src="images\ebox.png" style="height: 50px; padding-top: 10px"></li>
-        <!--<li><a href="index.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Profile</a></li>-->
-        
+        <li><a href="index.php" ><img src="images\ebox.png" style="height: 50px; padding-top: 10px"></a></li>
+
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
