@@ -1,6 +1,7 @@
 <?php
 
 require_once('connect.php');
+
 ?>
 <!DOCTYPE html>
 
@@ -155,14 +156,12 @@ require_once('connect.php');
 <div class="container text-center">
     <h3 style="color: red;">Picture here with the green hue on top</h3><br>
     <div class="row" style="margin: inherit;">
+        <center>
         <div class="col-sm-4">
             <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
             <p>Current Project</p>
         </div>
-        <div class="col-sm-4">
-            <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            <p>Project 2</p>
-        </div>
+        </center>
     </div>
 </div><br>
 
