@@ -23,12 +23,15 @@ if (isset($_GET['id']) && isset($_GET['date']) && isset($_GET['email']) && isset
     $date = $_GET['date'];
     $email = $_GET['email'];
     $password = $_GET['password'];
+    print_r('first');
+
 }
 else if (isset($_POST['id']) && isset($_POST['email']) && isset($_POST['password'])) {
     // Grab the score data from the POST
     $id = $_POST['id'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    print_r('second');
 }
 else {
     echo '<p class="error">Sorry, no user was specified for approval.</p>';
