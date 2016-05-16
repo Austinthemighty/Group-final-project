@@ -1,0 +1,109 @@
+nav{
+    text-align:center;
+    width:100%;
+    position:relative;
+    height:auto;
+    overflow:hidden;
+/*    background:transparent;
+    background-color:transparent;*/
+}
+nav ul {
+    text-align:center;
+}
+nav ul li {
+    display:inline-block;
+}
+nav ul li a {
+    display:inline-block;
+    padding-top: 0em;
+    padding: 0em 3em;
+    margin: 4px 17px;
+    text-decoration:none;
+    /*border-bottom:2px solid #fff;*/
+    transition-property:all .2s linear 0s;
+    -moz-transition:all .2s linear 0s;
+    -webkit-transition:all .2s linear 0s;
+    -o-transition:all .2s linear 0s;
+    font-size:19px;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #34B484;
+}
+.footer{
+    background-color: #373B43;
+    Height: 230px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer p{
+    color:white;
+    margin-bottom: 0px;
+}
+
+/*ADMIN STYLE*/
+.ad-nav{
+    max-width: inherit;
+    min-height: auto;
+    background-size: cover;
+    border-spacing: 30px;
+    
+}
+.ad-h1{
+    color: #34B484;
+    margin-left: 30px;
+    font-family:'Montserrat',sans-serif;
+}
+/*ADMIN STYLE*/
+
+/*PRODUCT STYLE*/
+.prod-img{
+    margin-top: 0px;
+    max-width: inherit;
+    height: 640px;
+    min-height: auto;
+    background-size: cover;
+    background-image: url("http://eastbrooklyn.com/wp-content/uploads/2015/04/Computer-Hardware.jpg");
+}
+.prod-img-tint{
+    background-color: #b8b8b8;
+    background-blend-mode: multiply;
+}
+.text-center h2{
+    color: #34B484;
+}
+.text-center h4{
+    color: #f5f5f5;
+}
+.panel .panel-footer{
+    background-color: #1c1c1c;
+    border-top: 1px solid #1c1c1c;
+}
+.panel .panel-heading h1{
+    color: #34B484;
+}
+.panel .panel-footer h3{
+    color: #b8b8b8;
+}
+.panel .panel-footer .btn{
+    background-color: #1c1c1c;
+    color: #b8b8b8;
+    border: 1px solid #b8b8b8;
+    transition-property:all .1s linear 0s;
+    -moz-transition:all .1s linear 0s;
+    -webkit-transition:all .1s linear 0s;
+    -o-transition:all .1s linear 0s;
+}
+.panel .panel-footer .btn:hover{
+    background-color: #34B484;
+    color: white;
+
+}
+.footer{
+    background-color: #1c1c1c;
+    Margin-bottom: 0px;
+    height: 190px;
+}
