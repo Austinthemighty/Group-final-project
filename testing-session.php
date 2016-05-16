@@ -7,8 +7,6 @@
  */
 session_start();
 
-$_SESSION['user_id']='angel';
-
-session_destroy();
+echo "<p>welcome ".$_SESSION['email'].".</p>"
 
 ?>

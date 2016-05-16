@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <title>Register</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html"><img src="images/ebox.png" alt="logo" style="height: 29px;width: 40px;margin-top: 0px;"></a></li>
+        <li><a href="products.html">Subscriptions</a></li>
+        <li><a href="#">Profile</a></li>
+    </ul>
+</nav>
+
+
+<!---->
+<div style="padding-left: 10%">
+    <!--background color is a dim grey-->
+    <!--Log-in HTML-->
+    <table style="width:100%">
+        <tr>
+            <td>
+                <!--LOG-IN HTML-->
+                <h1>Log-in</h1>
+                <!--h1 font #34b484-->
+                <form method="post">
+                    <action="<?php echo $_SERVER['PHP_SELF'];?>"-->
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email"/><br />
+                    <!--value="<?php if (!empty($id)) echo $id; ?>"-->
+                    <label for="password">Password:</label>
+                    <input type="password" id="password1" name="password1" /><br />
+                    <input type="submit" value="Sign Up" name="submit-ln" />
+                </form>
+                <!--form name is a dim white-->
+
+
+
+            </td>
+            <td>
+
+                <!--SIGN-UP HTML-->
+                <h1>Sign-up</h1>
+                <!--h1 font #34b484-->
+                <form method="post">
+                    <!--action="<?php echo $_SERVER['PHP_SELF']; ?>"-->
+                    <label for="id">Username:</label>
+                    <input type="text" id="id" name="id" /><br />
+                    <!--value="<?php if (!empty($id)) echo $id; ?>"-->
+                    <label for="password">Password:</label>
+                    <input type="password" id="password1" name="password1" /><br />
+                    <label for="password2">Password (retype):</label>
+                    <input type="password" id="password2" name="password2" /><br />
+                    <label for="email">email:</label>
+                    <input type="text" id="email" name="email" /></br>
+                    <input type="submit" value="Sign Up" name="submit-sp" />
+                </form>
+                <!--form name is a dim white-->
+            </td>
+        </tr>
+    </table>
+
+    <!--There should be a pop-up window asking for payment method-->
+</div>
+<footer class="footer" style="background-color: #373B43">
+    <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
+    <h1 style="color:#fff">footer text</h1>
+</footer>
+</body>
+</html>
