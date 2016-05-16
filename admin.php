@@ -21,6 +21,7 @@ $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 $query = "SELECT * FROM user ORDER BY date DESC, date ASC";
 $stmt = $dbh->prepare($query);
 $stmt->execute();
+
 $result = $stmt ->fetchAll();
 // Loop through the array of score data, formatting it as HTML
 echo '<table>';
@@ -32,7 +33,7 @@ foreach ($result as $row) {
         '&amp;email=' . $row['email'] .
         '">Remove</a>';
     if ($row['approved'] == 0) {
-        echo ' / <a href="approvescore.php?id=' . $row['id'] . '&amp;date=' . $row['date'] .
+        echo ' / <a href="approveuser.php?id=' . $row['id'] . '&amp;date=' . $row['date'] .
             '&amp;email=' . $row['email'] . '&amp;password=' . $row['password'];
         echo '</td></tr>';
     }

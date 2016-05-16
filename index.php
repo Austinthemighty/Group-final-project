@@ -24,31 +24,25 @@ require_once('connect.php');
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<<<<<<< HEAD
-<body style="background-color: #000;">
-    
+<body>
+<a style="background-color: #000;"></a>
 <nav style="background-color: #000;">
     <ul>
         
         <li><a href="index.php"><img src="images\ebox.png" style="height: 50px; padding-top: 10px" ></a></li>
-        <!--<li><a href="index.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Profile</a></li>-->
-        
+
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
     </div>
 </nav>
 <div class="overlay">
-    <div class="wrap">
-        <ul class="wrap-nav">
-            <li><a href="about.php">About</a>
-                <ul>
+    <div> class="wrap">
+        <ul> </ul>class="wrap-nav">
+            <li><a href="about.php">About</a></li>
+                </div>
 
-                </ul>
+                </>
             </li>
             <li><a href="products.html">Subscriptions</a>
                 <ul>
@@ -82,8 +76,7 @@ require_once('connect.php');
                     </div>
                 </a>
             </div>
-=======
-    <title>Ebox</title>
+    <title>E-box</title>
 </head>
 <body style="background-color: #1c1c1c;">
 <div class="intro intro-tint">
@@ -98,7 +91,6 @@ require_once('connect.php');
         <h1>Welcome</h1>
         <h2>to Ebox</h2>
         <h3>Supplying innovators with a surprise!</h3>
->>>>>>> 3da992c0aa31b71fd6da8b5acf170b5c1f8c9e1c
     </div>
 </div>
 

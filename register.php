@@ -19,12 +19,8 @@ if (isset($_POST['submit-sp'])) {
         // Connect to the database
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
-        // Make sure someone isn't already registered using this username
-<<<<<<< HEAD
-        $query = "SELECT * FROM user WHERE id = $id";
-=======
+        // Make sure someone isn't already registered using this username$query = "SELECT * FROM user WHERE id = $id";
         $query = "SELECT * FROM user WHERE id = :id, password = :password1, email = :email";
->>>>>>> 3da992c0aa31b71fd6da8b5acf170b5c1f8c9e1c
         $stmt = $dbh->prepare($query);
         $stmt->execute(array(
             'id' => $id,
