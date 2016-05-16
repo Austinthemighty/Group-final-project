@@ -40,8 +40,8 @@
     <nav>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Subscriptions</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="products.php">Subscriptions</a></li>
                 <li><a href="#">Profile</a></li>
             </ul>
         </nav>

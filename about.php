@@ -51,7 +51,7 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Work</a></li>
-        <li><a href="#">Register</a></li>
+        <li><a href="register.php">Register</a></li>
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
@@ -78,8 +78,8 @@
             </li>
             <li><a href="#">Register</a>
                 <ul>
-                    <li><a href="#">Log-in</a></li>
-                    <li><a href="#">Sign-Up</a></li>
+                    <li><a href="register.php">Log-in</a></li>
+                    <li><a href="register.php"">Sign-Up</a></li>
                 </ul>
             </li>
             <div class="social">

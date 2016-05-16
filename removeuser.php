@@ -3,11 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Guitar Wars - Remove a High Score</title>
+    <title> E-Box - Remove a User</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<h2>Guitar Wars - Remove a High Score</h2>
+<h2>E-Box - Remove a User</h2>
 ​
 <?php
 //require_once('appvars.php');
@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         // Delete the score data from the database
-        $query = "DELETE FROM user";
+        $query = "DELETE FROM user WHERE id = $id LIMIT 1";
         $stmt = $dbh->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll();
@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
 } else if (isset($id) && isset($email) && isset($password)) {
     echo '<p>Are you sure you want to delete the following profile?</p>';
     echo '<p><strong>Name: </strong>' . $email . '<br /><strong>Date: </strong>' . $date .
-        '<br /><strong>Score: </strong>' . $score . '</p>';
+        '<br /><strong>Password: </strong>' . $password . '</p>';
     echo '<form method="post" action="removeuser.php">';
     echo '<input type="radio" name="confirm" value="Yes" /> Yes ';
     echo '<input type="radio" name="confirm" value="No" checked="checked" /> No <br />';
