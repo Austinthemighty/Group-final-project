@@ -160,7 +160,7 @@ if(isset($_POST['submit-ln'])){
             
                 <!--Sign-up HTML-->
                 <h1>Sign-up</h1>
-                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" xmlns="http://www.w3.org/1999/html">
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
                     <label for="id">Username:</label>
                     <input type="text" id="id" name="id" value="<?php if (!empty($id)) echo $id; ?>" /><br />
                     <label for="password">Password:</label>
@@ -169,12 +169,42 @@ if(isset($_POST['submit-ln'])){
                     <input type="password" id="password2" name="password2" /><br />
                     <label for="email">email:</label>
                     <input type="text" id="email" name="email" /></br>
-                    <input type="submit" value="Sign Up" name="submit-sp" />
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Sign Up</button>
                 </form>
             </td>
         </tr>
     </table>
 </div>
+
+<div class="container">
+  <h2>Modal Example</h2>
+  
+  
+
+  
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
 
 <footer class="footer" style="background-color: #373B43">
     <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
