@@ -116,7 +116,7 @@ require_once('connect.php');
             <tr class="row-3">
                 <td></td>
                 <!--align this to the 'Computer hardware' text-->
-                <td><a href="products.html">Check it</a></td>
+                <td><a href="products.php">Check it</a></td>
             </tr>
         </table>
     </div>
@@ -132,7 +132,7 @@ require_once('connect.php');
     <!--white font/light grey tone-->
     <br>
     <br>
-    <h4><a href="register.html">Register</a></h4>
+    <h4><a href="register.php">Register</a></h4>
     <!--make it so that when you hover the underline goes away and the text turns #34b484-->
     <!--h4 has white colored fonts and when hovered over a line on the bottom appears(#34b84)-->
 </div>

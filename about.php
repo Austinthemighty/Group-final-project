@@ -48,7 +48,14 @@
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
+<<<<<<< HEAD
 
+=======
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="register.php">Register</a></li>
+>>>>>>> 53a881eae657c2726a59221bf3dc50a2e54df5b3
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
@@ -75,7 +82,12 @@
             </li>
             <li><a href="#">Profile</a>
                 <ul>
+<<<<<<< HEAD
 
+=======
+                    <li><a href="register.php">Log-in</a></li>
+                    <li><a href="register.php"">Sign-Up</a></li>
+>>>>>>> 53a881eae657c2726a59221bf3dc50a2e54df5b3
                 </ul>
             </li>
             <div class="social">
