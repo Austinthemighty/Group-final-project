@@ -35,68 +35,76 @@
     </nav>
 </div>
 
-<!--products-->
-<div id="pricing" class="container-fluid price-img" >
-    <div class="text-center">
-        <h2>Subscriptions</h2>
-        <h4>Choose wisely</h4>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 col-xs-9">
-            <div class="panel text-center" style="background-color: #1c1c1c;">
-                <div class="panel-heading">
-                    <h1>Basic</h1>
-                </div>
-                <div class="panel-body">
-                    <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
-                </div>
-                <div class="panel-footer" style="background-color: #1c1c1c;">
-                    <h3>$19</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Subscribe</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-9">
-            <div class="panel text-center" style="background-color: #1c1c1c;">
-                <div class="panel-heading">
-                    <h1>Pro</h1>
-                </div>
-                <div class="panel-body">
-                    <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$29</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Subscribe</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-9">
-            <div class="panel text-center" style="background-color: #1c1c1c;">
-                <div class="panel-heading">
-                    <h1>Premium</h1>
-                </div>
-                <div class="panel-body">
-                    <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$49</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--produvts-->
+<nav style="background-color: #fff;">
+    <ul>
 
-<footer class="footer">
-    <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
-    <h1 style="color:#fff">footer text</h1>
-</footer>
+        <li><a href="index.php" ><img src="images\ebox.png" style="height: 50px; padding-top: 10px"></a></li>
+
+    </ul>
+    <div class="button">
+        <a class="btn-open" href="#"></a>
+        <!--products-->
+        <div id="pricing" class="container-fluid price-img" >
+            <div class="text-center">
+                <h2>Subscriptions</h2>
+                <h4>Choose wisely</h4>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-xs-9">
+                    <div class="panel text-center" style="background-color: #1c1c1c;">
+                        <div class="panel-heading">
+                            <h1>Basic</h1>
+                        </div>
+                        <div class="panel-body">
+                            <h1>image goes here</h1>
+                            <p><strong>Description</strong> here</p>
+                        </div>
+                        <div class="panel-footer" style="background-color: #1c1c1c;">
+                            <h3>$150</h3>
+                            <h4>per month</h4>
+                            <button class="btn btn-lg">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-9">
+                    <div class="panel text-center" style="background-color: #1c1c1c;">
+                        <div class="panel-heading">
+                            <h1>Pro</h1>
+                        </div>
+                        <div class="panel-body">
+                            <h1>image goes here</h1>
+                            <p><strong>Description</strong> here</p>
+                        </div>
+                        <div class="panel-footer">
+                            <h3>$350</h3>
+                            <h4>per month</h4>
+                            <button class="btn btn-lg">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-9">
+                    <div class="panel text-center" style="background-color: #1c1c1c;">
+                        <div class="panel-heading">
+                            <h1>Premium</h1>
+                        </div>
+                        <div class="panel-body">
+                            <h1>image goes here</h1>
+                            <p><strong>Description</strong> here</p>
+                        </div>
+                        <div class="panel-footer">
+                            <h3>$550</h3>
+                            <h4>per month</h4>
+                            <button class="btn btn-lg">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--products-->
+
+        <footer class="footer">
+            <!--containing glyphicons of facebook, twitter, instagram, and pinterest-->
+            <h1 style="color:#fff">footer text</h1>
+        </footer>
 </body>
 </html>
