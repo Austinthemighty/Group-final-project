@@ -44,7 +44,7 @@ require_once('connect.php');
 
                 </>
             </li>
-            <li><a href="products.html">Subscriptions</a>
+            <li><a href="products.php">Subscriptions</a>
                 <ul>
                     <li><a href="products.php">Small</a></li>
                     <li><a href="products.php">Basic</a></li>
@@ -60,17 +60,17 @@ require_once('connect.php');
                 </ul>
             </li>
             <div class="social">
-                <a href="#">
+                <a href="https://www.facebook.com">
                     <div class="social-icon">
                         <i class="fa fa-facebook"></i>
                     </div>
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/?lang=en">
                     <div class="social-icon">
                         <i class="fa fa-twitter"></i>
                     </div>
                 </a>
-                <a href="#">
+                <a href="http://codepen.io/">
                     <div class="social-icon">
                         <i class="fa fa-codepen"></i>
                     </div>
