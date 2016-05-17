@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         // Approve the score by setting the approved column in the database
-        $query = "UPDATE user SET approved = 1 WHERE id = :id";
+        $query = "UPDATE user SET approved = 1 WHERE id = $id";
 
         $stmt = $dbh->prepare($query);
         $stmt->execute(array('id' => $id));

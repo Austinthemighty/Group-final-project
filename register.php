@@ -65,7 +65,7 @@ if(isset($_POST['submit-ln'])){
     $email = trim($_POST['email']);
     $password = trim($_POST['password1']);
 
-    if(!empty($email) && !empty($password)) {
+    if(!empty($email) && !empty($password1)) {
         //connection to database
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
@@ -82,7 +82,7 @@ if(isset($_POST['submit-ln'])){
             $stmt = $dbh->prepare($query);
             $stmt->execute(array(
                 'email' => $email,
-                'password' => $password1
+                'password1' => $password1
             ));
 
             $_SESSION['email'] = $email;

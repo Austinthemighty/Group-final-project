@@ -19,7 +19,7 @@ require_once('connect.php');
 $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 // Retrieve the score data from MySQL
 $query = "SELECT * FROM user ORDER BY date DESC, date ASC";
-$dbh = new PDO("mysql:host=localhost;dbname=e-box, 'root, 'root");
+$dbh = new PDO("mysql:host=localhost;dbname=e-box, 'root', 'root'");
 // Retrieve the score data from MySQL
 $query = "SELECT * FROM user ORDER BY email DESC, date ASC";
 $stmt = $dbh->prepare($query);
