@@ -1,8 +1,6 @@
 <?php
-
-require_once('connect.php');
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -33,6 +31,7 @@ require_once('connect.php');
             <li><a href="index.php">Home</a></li>
             <li><a href="products.php">Subscriptions</a></li>
             <li><a href="profile.php">Profile</a></li>
+            <li><a href="register.php">log-in/sign-up</a></li>
         </ul>
     </nav>
     <div class="intro-txt">

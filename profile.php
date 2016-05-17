@@ -26,85 +26,37 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-    <title>Subscriptions</title>
+    <title>Profile</title></title>
 </head>
-<body class="prod-img prod-img-tint">
-<!-- the body shal contain the photo background-->
-<div class="nav">
+<body class="prof prof-tint">
+<!--background has a photo along with the a dark hue for the words to appear-->
+<div class="mid-gry">
+<div class="nav text-center">
     <nav>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Subscriptions</a></li>
-                <li><a href="#">Profile</a></li>
-            </ul>
-        </nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="products.php">Subscriptions</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
     </nav>
 </div>
 
-<!--products-->
-<div id="pricing" class="container-fluid price-img" >
-    <div class="text-center">
-        <h2>Subscriptions</h2>
-        <h4>Choose wisely</h4>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 col-xs-9">
-            <div class="panel text-center" style="background-color: #1c1c1c;">
-                <div class="panel-heading">
-                    <h1>Basic</h1>
-                </div>
-                <div class="panel-body">
-                    <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
-                </div>
-                <div class="panel-footer" style="background-color: #1c1c1c;">
-                    <h3>$19</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Subscribe</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-9">
-            <div class="panel text-center" style="background-color: #1c1c1c;">
-                <div class="panel-heading">
-                    <h1>Pro</h1>
-                </div>
-                <div class="panel-body">
-                    <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$29</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Subscribe</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-9">
-            <div class="panel text-center" style="background-color: #1c1c1c;">
-                <div class="panel-heading">
-                    <h1>Premium</h1>
-                </div>
-                <div class="panel-body">
-                    <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$49</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="profile text-center">
+    <h2>Name</h2>
+    <!--under profile pic-->
+    <h3>Email</h3>
+    <!--Under username-->
 </div>
-<!--produvts-->
 
+<div class="product-pic">
+    <!--fetcing a php session to display all data on the subscriptions-->
+    <input type="submit" value="Edit Subscript" name="submit-sp" />
+</div>
+</div>
 <footer class="footer">
     <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
     <h1 style="color:#fff">footer text</h1>
 </footer>
+
 </body>
 </html>

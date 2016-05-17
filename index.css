@@ -135,7 +135,14 @@ table{
 }
 .closer h4 a:hover{
     text-decoration: none;
-    border-bottom: 3px solid #34B484;
+    padding-left: 4px;
+    margin-left: 147px;
+    border: 1px solid #34B484;
+    padding-right: 1px;
+    transition-property:all .2s linear 0s;
+    -moz-transition:all .2s linear 0s;
+    -webkit-transition:all .2s linear 0s;
+    -o-transition:all .2s linear 0s;
 }
 .footer{
     margin-top: 0px;

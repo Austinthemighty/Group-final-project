@@ -1,15 +1,13 @@
 nav{
     text-align:center;
     width:100%;
-    position:relative;
+    /*position:relative;*/
     height:auto;
     overflow:hidden;
 /*    background:transparent;
     background-color:transparent;*/
 }
-nav ul {
-    text-align:center;
-}
+
 nav ul li {
     display:inline-block;
 }
@@ -102,6 +100,32 @@ nav ul li a:hover {
     color: white;
 
 }
+
+/*PROFILE STYLE*/
+.prof{
+    background-image: url("http://dizgisan.com/images/photos/a4.jpg");
+    background-size: cover;
+}
+.prof-tint{
+    background-color: #34B484;
+    background-blend-mode: multiply;
+}
+.mid-gry{
+    background-color: #1c1c1c;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.profile h3{
+    color: #b8b8b8;
+}
+.product-pic{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/*PROFILE STYLE*/
 .footer{
     background-color: #1c1c1c;
     Margin-bottom: 0px;
