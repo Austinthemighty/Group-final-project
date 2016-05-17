@@ -35,7 +35,6 @@
     </nav>
 </div>
 
-<<<<<<< HEAD
 <nav style="background-color: #fff;">
     <ul>
         
@@ -44,13 +43,11 @@
     </ul>
     <div class="button">
         <a class="btn-open" href="#"></a>
-=======
 <!--products-->
 <div id="pricing" class="container-fluid price-img" >
     <div class="text-center">
         <h2>Subscriptions</h2>
         <h4>Choose wisely</h4>
->>>>>>> 3da992c0aa31b71fd6da8b5acf170b5c1f8c9e1c
     </div>
     <div class="row">
         <div class="col-sm-4 col-xs-9">
@@ -60,10 +57,10 @@
                 </div>
                 <div class="panel-body">
                     <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
+                    <p><strong>Description</strong> here</p>
                 </div>
                 <div class="panel-footer" style="background-color: #1c1c1c;">
-                    <h3>$19</h3>
+                    <h3>$150</h3>
                     <h4>per month</h4>
                     <button class="btn btn-lg">Subscribe</button>
                 </div>
@@ -76,10 +73,10 @@
                 </div>
                 <div class="panel-body">
                     <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
+                    <p><strong>Description</strong> here</p>
                 </div>
                 <div class="panel-footer">
-                    <h3>$29</h3>
+                    <h3>$350</h3>
                     <h4>per month</h4>
                     <button class="btn btn-lg">Subscribe</button>
                 </div>
@@ -92,10 +89,10 @@
                 </div>
                 <div class="panel-body">
                     <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
+                    <p><strong>Description</strong> here</p>
                 </div>
                 <div class="panel-footer">
-                    <h3>$49</h3>
+                    <h3>$550</h3>
                     <h4>per month</h4>
                     <button class="btn btn-lg">Subscribe</button>
                 </div>
@@ -103,10 +100,10 @@
         </div>
     </div>
 </div>
-<!--produvts-->
+<!--products-->
 
 <footer class="footer">
-    <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
+    <!--containing glyphicons of facebook, twitter, instagram, and pinterest-->
     <h1 style="color:#fff">footer text</h1>
 </footer>
 </body>
