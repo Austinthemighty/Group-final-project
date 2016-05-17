@@ -1,6 +1,12 @@
 <!DOCTYPE html>
     <?php
-    
+    if(isset($_POST['submit'])){
+        if(isset($_SESSION['sass'])){
+            header('location:.php');
+        }else{
+            header('location:register.php');
+        }
+    }
     ?>
 <html lang="en">
 <head>
@@ -30,14 +36,18 @@
     <nav>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Subscriptions</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="products.php">Subscriptions</a></li>
                 <li><a href="#">Profile</a></li>
             </ul>
         </nav>
     </nav>
 </div>
 
+
+<form method='post'>
+    <input type="submit" value="Subscribe" name="submit" />
+</form>
 <!--products-->
 <div id="pricing" class="container-fluid price-img" >
     <div class="text-center">
