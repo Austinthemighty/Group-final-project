@@ -132,12 +132,14 @@ table{
     font-size: 40px;
     padding-left: 4px;
     margin-left: 147px;
+    padding-right: 1px;
+    border: 1px ;
+    border-color: transparent;
 }
 .closer h4 a:hover{
     text-decoration: none;
     padding-left: 4px;
     margin-left: 147px;
-    border: 1px solid #34B484;
     padding-right: 1px;
     transition-property:all .2s linear 0s;
     -moz-transition:all .2s linear 0s;

@@ -3,10 +3,6 @@
 
 session_start();
 
-$title = 'Register';
-require_once('connect.php');
-require_once('header.php');
-
 //-------------SIGN-UP.php-----------//
 if (isset($_POST['submit-sp'])) {
     // Grab the profile data from the POST
@@ -22,11 +18,7 @@ if (isset($_POST['submit-sp'])) {
         // Make sure someone isn't already registered using this username
         $query = "SELECT * FROM user WHERE id = :id, password = :password1, email = :email";
         $stmt = $dbh->prepare($query);
-        $stmt->execute(array(
-            'id' => $id,
-            'password'=>  $password1,
-            'email' => $email
-        ));
+        $stmt->execute(array( 'id' => $id, 'password'=>  $password1, 'email' => $email ));
         $result = $stmt->fetchAll();
         $count = $stmt->rowCount();
 
@@ -62,33 +54,36 @@ if (isset($_POST['submit-sp'])) {
 //----------LOG-IN.php----
 if(isset($_POST['submit-ln'])){
     //grabbing profile data from the POST
-    $email = trim($_POST['email']);
-    $password = trim($_POST['password1']);
+    $email1 = trim($_POST['email1']);
+    $password = trim($_POST['password']);
 
-    if(!empty($email) && !empty($password)) {
+    if(!empty($email1) && !empty($password)) {
         //connection to database
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         //check if the user is real
-        $query = "SELECT * FROM user WHERE id = :id";
+        $query = "SELECT * FROM user WHERE id = :id, password = :password";
         $stmt = $dbh->prepare($query);
-        $stmt->execute();
+        $stmt->execute(array(
+                             'email1' => $email1,
+                             'password' => $password
+                             ));
         $result = $stmt->fetchAll();
         $count = $stmt->rowCount();
 
         if ($count == 0) {
             // The username is unique, so insert the data into the database
-            $query = "SELECT * FROM user (email, password) VALUES (:email, SHA(:password1))";
+            $query = "SELECT * FROM user (email, password) VALUES (:email1, SHA(:password))";
             $stmt = $dbh->prepare($query);
             $stmt->execute(array(
-                'email' => $email,
-                'password' => $password1
+                'email' => $email1,
+                'password' => $password
             ));
-
-            $_SESSION['email'] = $email;
+                header('location: index.php');
+            $_SESSION['email'] = $email1;
 
             // Confirm success with the user
-            echo "<p>You're signed in " . $email . ".</p>";
+            echo "<p>You're signed in " . $email1 . ".</p>";
             exit();
         } else {
             // An account already exists for this username, so display an error message
@@ -148,11 +143,15 @@ if(isset($_POST['submit-ln'])){
             <td>
                 <h1>Log-in</h1>
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" value="<?php if (!empty($id)) echo $id; ?>" /><br />
+                
+                
+                    <label for="email1">Email:</label>
+                    <input type="text" id="email1" name="email1" value="<?php if (!empty($email1)) echo $email1; ?>" /><br />
+                    
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password1" /><br />
-                    <input type="submit" value="Sign Up" name="submit-ln" />
+                    <input type="password" id="password" name="password" /><br />
+                    
+                    <input type="submit" value="Log-in" name="submit-ln" />
                 </form>
                 <!--Log-in HTML-->
             </td>
@@ -161,14 +160,21 @@ if(isset($_POST['submit-ln'])){
                 <!--Sign-up HTML-->
                 <h1>Sign-up</h1>
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" xmlns="http://www.w3.org/1999/html">
+                
                     <label for="id">Username:</label>
                     <input type="text" id="id" name="id" value="<?php if (!empty($id)) echo $id; ?>" /><br />
+                    
                     <label for="password">Password:</label>
                     <input type="password" id="password1" name="password1" /><br />
+                    
                     <label for="password2">Password (retype):</label>
                     <input type="password" id="password2" name="password2" /><br />
+                   
+                   
                     <label for="email">email:</label>
                     <input type="text" id="email" name="email" /></br>
+                    
+                    
                     <input type="submit" value="Sign Up" name="submit-sp" />
                 </form>
             </td>
