@@ -12,27 +12,35 @@
 <hr />
 ​
 <?php
-session_start(); 
+session_start();
 require_once ('authorize.php');
 require_once('connect.php');
 // Connect to the database
+$dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
+// Retrieve the score data from MySQL
+$query = "SELECT * FROM user ORDER BY date DESC, date ASC";
 $dbh = new PDO("mysql:host=localhost;dbname=e-box, 'root, 'root");
 // Retrieve the score data from MySQL
 $query = "SELECT * FROM user ORDER BY email DESC, date ASC";
 $stmt = $dbh->prepare($query);
 $stmt->execute();
+
 $result = $stmt ->fetchAll();
 // Loop through the array of score data, formatting it as HTML
 echo '<table>';
 foreach ($result as $row) {
     // Display the score data
-    echo '<tr class="scorerow"><td><strong>' . $row['email'] . '</strong></td>';
-    echo '<td class="username row"><strong>' . $row['id'] . '</strong>';
-    echo '<td><a href="removeuser.php?id=' . $row['id']  . '&amp;email=' . $row['email'] . '&amp;score=' . $row['password'] .
-        '&amp;screenshot=' . $row['screenshot'] . '">Remove</a>';
-    echo '</td></tr>';
-}
-echo '</table>';
-?>
+    echo '<tr class="emailrow"><td><strong>' . $row['email'] . '</strong></td>';
+    echo '<td>' . $row['date'] . '</td>';'</br>';
+    echo '<td><a href="removeuser.php?id=' . $row['id'] . '&amp;date=' . $row['date'] .
+        '&amp;email=' . $row['email'] .
+        '">Remove</a>';
+    if ($row['approved'] == 0) {
+        echo ' / <a href="approveuser.php?id=' . $row['id'] . '&amp;date=' . $row['date'] .
+            '&amp;email=' . $row['email'] . '&amp;password=' . $row['password'];
+        echo '</td></tr>';
+    }
+    echo '</table>';
+}?>
 </body>
 </html>
