@@ -3,19 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<<<<<<< HEAD
     <title> E-box - Remove a user</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
-<body>
 <h2>E-box Remove a user/subscriber</h2>
-=======
     <title> E-Box - Remove a User</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
 <h2>E-Box - Remove a User</h2>
->>>>>>> 53a881eae657c2726a59221bf3dc50a2e54df5b3
 ​
 <?php
 //require_once('appvars.php');
@@ -53,11 +48,8 @@ if (isset($_POST['submit'])) {
     }
 } else if (isset($id) && isset($email) && isset($password)) {
     echo '<p>Are you sure you want to delete the following profile?</p>';
-<<<<<<< HEAD
-    echo '<p><strong>E-mail: </strong>' . $email .
-=======
+    echo '<p><strong>E-mail: </strong>' . $email . '<br/>';
     echo '<p><strong>Name: </strong>' . $email . '<br /><strong>Date: </strong>' . $date .
->>>>>>> 53a881eae657c2726a59221bf3dc50a2e54df5b3
         '<br /><strong>Password: </strong>' . $password . '</p>';
     echo '<form method="post" action="removeuser.php">';
     echo '<input type="radio" name="confirm" value="Yes" /> Yes ';
