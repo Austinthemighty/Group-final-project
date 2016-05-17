@@ -16,15 +16,12 @@ session_start();
 require_once ('authorize.php');
 require_once('connect.php');
 // Connect to the database
-<<<<<<< HEAD
 $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 // Retrieve the score data from MySQL
 $query = "SELECT * FROM user ORDER BY date DESC, date ASC";
-=======
 $dbh = new PDO("mysql:host=localhost;dbname=e-box, 'root, 'root");
 // Retrieve the score data from MySQL
 $query = "SELECT * FROM user ORDER BY email DESC, date ASC";
->>>>>>> 53a881eae657c2726a59221bf3dc50a2e54df5b3
 $stmt = $dbh->prepare($query);
 $stmt->execute();
 
