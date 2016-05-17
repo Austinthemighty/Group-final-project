@@ -7,11 +7,56 @@
  */
 ?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Profile</title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    </body>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <title>Profile</title></title>
+</head>
+<body class="prof prof-tint">
+<!--background has a photo along with the a dark hue for the words to appear-->
+<div class="mid-gry">
+<div class="nav text-center">
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="products.php">Subscriptions</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="profile text-center">
+    <h2>Name</h2>
+    <!--under profile pic-->
+    <h3>Email</h3>
+    <!--Under username-->
+</div>
+
+<div class="product-pic">
+    <!--fetcing a php session to display all data on the subscriptions-->
+    <input type="submit" value="Edit Subscript" name="submit-sp" />
+</div>
+</div>
+<footer class="footer">
+    <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
+    <h1 style="color:#fff">footer text</h1>
+</footer>
+
+</body>
 </html>
