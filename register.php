@@ -128,12 +128,12 @@ if(isset($_POST['submit-ln'])){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <title>Register</title>
 </head>
-<body>
+<body style='background-image: url("https://pbs.twimg.com/media/CXVbrKjWcAASgHz.jpg");background-repeat: no-repeat;'>
 <nav>
     <ul>
-        <li><a href="index.php"><img src="images/ebox.png" alt="logo" style="height: 29px;width: 40px;margin-top: 0px;"></a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="products.php">Subscriptions</a></li>
-        <li><a href="#">Profile</a></li>
+        <li><a href="profile.php">Profile</a></li>
     </ul>
 </nav>
 
@@ -141,23 +141,24 @@ if(isset($_POST['submit-ln'])){
 
 <!---                                       REGISTER.PHP                                                             -->
 
-<div style="padding-left: 10%">
+<div class="reg-table" style="width: 899px;height: 320px;margin-left: 300px;margin-top: 112px">
 <!--Log-in HTML-->
-    <table id="regtab" style="width:100%">
+    <table id="regtab" style="width:80%;padding-left: 10%;margin-left: 200px;text-align: left">
         <tr>
             <td>
                 <h1>Log-in</h1>
-                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" style="text-align: left">
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email" value="<?php if (!empty($id)) echo $id; ?>" /><br />
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password1" /><br />
                     <input type="submit" value="Sign Up" name="submit-ln" />
                 </form>
+                </div>
                 <!--Log-in HTML-->
             </td>
             <td>
-            
+
                 <!--Sign-up HTML-->
                 <h1>Sign-up</h1>
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" xmlns="http://www.w3.org/1999/html">
@@ -176,10 +177,51 @@ if(isset($_POST['submit-ln'])){
     </table>
 </div>
 
-<footer class="footer" style="background-color: #373B43">
-    <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
-    <h1 style="color:#fff">footer text</h1>
-</footer>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+
+            <br>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://www.facebook.com"> <img src="http://ri2.sierraclub.org/sites/ri.sierraclub.org/files/Transparent-Facebook-Logo-Icon.png"  width='12%'> </a>
+                    <br><br><br>
+
+                    <a href="index.php"> <h4 class="footertext">home<br></a>
+
+                </center>
+            </div>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://www.instagram.com/accounts/login/?force_classic_login"> </a> <img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-512.png"  width='12%'></a>
+                    <br><br><br>
+
+                    <a href="register.php"> <h4 class="footertext">register<br></a>
+                </center>
+            </div>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://twitter.com"> <img src="https://g.twimg.com/Twitter_logo_blue.png"  width='12%'></a>
+                    <br><br><br>
+
+                    <a href="products.php"> <h4 class="footertext">subscription<br> </a>
+
+                </center>
+            </div>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://www.pinterest.com"> </a> <img src="http://www.maylifestyle.com/wp-content/uploads/2013/02/icono-pinterest-color-04.png"  width='12%'></a>
+                    <br><br><br>
+
+                    <a href="register.php"> <h4 class="footertext">register<br></a>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <p><center><a href="about.php">Contact us</a> <p class="footertext">Copyright @ <span style="color:#34b484;">E-box</span> 2016</p></center></p>
+        </div>
+    </div>
+</div>
 </body>
     <!--Sign-up HTML-->
 </html>

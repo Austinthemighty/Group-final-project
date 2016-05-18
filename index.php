@@ -84,10 +84,51 @@ require_once('connect.php');
     <!--make it so that when you hover the underline goes away and the text turns #34b484-->
     <!--h4 has white colored fonts and when hovered over a line on the bottom appears(#34b84)-->
 </div>
-<footer class="footer">
-    <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
-    <h1 style="color:#fff">footer text</h1>
-</footer>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+
+            <br>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://www.facebook.com"> <img src="http://ri2.sierraclub.org/sites/ri.sierraclub.org/files/Transparent-Facebook-Logo-Icon.png"  width='12%'> </a>
+                    <br><br><br>
+
+                    <a href="index.php"> <h4 class="footertext">home<br></a>
+
+                </center>
+            </div>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://www.instagram.com/accounts/login/?force_classic_login"> </a> <img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-512.png"  width='12%'></a>
+                    <br><br><br>
+
+                    <a href="register.php"> <h4 class="footertext">register<br></a>
+                </center>
+            </div>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://twitter.com"> <img src="https://g.twimg.com/Twitter_logo_blue.png"  width='12%'></a>
+                    <br><br><br>
+
+                    <a href="products.php"> <h4 class="footertext">subscription<br> </a>
+
+                </center>
+            </div>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://www.pinterest.com"> </a> <img src="http://www.maylifestyle.com/wp-content/uploads/2013/02/icono-pinterest-color-04.png"  width='12%'></a>
+                    <br><br><br>
+
+                    <a href="register.php"> <h4 class="footertext">register<br></a>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <p><center><a href="about.php">Contact us</a> <p class="footertext">Copyright @ <span style="color:#34b484;">E-box</span> 2016</p></center></p>
+        </div>
+    </div>
+</div>
 </body>
 
 

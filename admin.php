@@ -30,8 +30,8 @@ foreach ($result as $row) {
     echo '<td class="username row"><strong>' . $row['id'] . '</strong>';
     echo '<td><a href="removeuser.php?id=' . $row['id']  . '&amp;email=' . $row['email'] . '&amp;score=' . $row['password'] .
         '&amp;screenshot=' . $row['screenshot'] . '">Remove</a>';
-    echo '</td></tr>';
-}
+    echo '</td></tr>';}
+
 echo '</table>';
 ?>
 </body>
