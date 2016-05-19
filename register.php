@@ -2,8 +2,14 @@
 <?php
 
 session_start();
-
-$title = 'Register';
+    if(isset($_POST['log-out'])){
+    if(isset($_SESSION['pass'])){
+      unset($_SESSION['pass']);
+    }else{
+      echo "<h1 style='color: red'>Nothing here</h1>";
+    }
+  }
+  
 
 //-------------SIGN-UP.php-----------//
 if (isset($_POST['submit-sp'])) {
@@ -33,8 +39,6 @@ if (isset($_POST['submit-sp'])) {
             $stmt->execute(array(
                 ':password'=>  $password1
             ));
-
-            $_SESSION['pass'] = $password1;
 
             // Confirm success with the user
             echo "<p style='color:red'>Your new account has been successfully ". $email ." created. You're now ready to <a href='register.php'>log in</a>.</p>";
@@ -90,7 +94,7 @@ if(isset($_POST['submit-ln'])){
     }
     else {
             echo"<p style='text-align: left;color:white'>No information inserted!</p>";
-        }
+        } 
 
         //switch around the if else in the if with the $count var and use the true statement to set up a $_SESSION to save around the site
 
@@ -148,13 +152,15 @@ if(isset($_POST['submit-ln'])){
             <?php
              if(isset($_SESSION['pass'])){
                     echo "<div class='dropdown'>
-    <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
-    <span class='glyphicon glyphicon-user'></span>  Hello</button>
-    <ul class='dropdown-menu'>
-      <li><a href='profile.php'>profile</a></li>
-      <li><a href='#'>Log-out</a></li>
-    </ul>
-  </div>";
+                                      <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
+                                                <span class='glyphicon glyphicon-user'></span>  Hello</button>
+                                                           <ul class='dropdown-menu'>
+                                                                     <li><a href='profile.php'>profile</a></li>
+                                                                     <form method='post'>
+                                                                     <li><input type='submit' style='background-color:transparent;border-color: transparent;margin-left: 9px' value='Log-out'  name='log-out' /></li>
+                                                                     </form>
+                                                          </ul>
+                             </div>";
                 }
             ?>
 

@@ -55,7 +55,7 @@ session_start();
 </div> 
 
             <?php
-             if(isset($_SESSION['password'])){
+             if(isset($_SESSION['pass'])){
                     echo "<div class='dropdown'>
     <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
     <span class='glyphicon glyphicon-user'></span>  Hello</button>

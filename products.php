@@ -1,11 +1,17 @@
 <!DOCTYPE html>
     <?
     session_start();
+    if(isset($_POST['log-out'])){
+    if(isset($_SESSION['pass'])){
+      unset($_SESSION['pass']);
+    }else{
+      echo "<h1 style='color: red'>Nothing here</h1>";
+    }
+  }
     ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
@@ -60,13 +66,15 @@
             <?php
              if(isset($_SESSION['pass'])){
                     echo "<div class='dropdown'>
-    <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
-    <span class='glyphicon glyphicon-user'></span>  Hello</button>
-    <ul class='dropdown-menu'>
-      <li><a href='profile.php'>profile</a></li>
-      <li><a href='#'>Log-out</a></li>
-    </ul>
-  </div>";
+                                      <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
+                                                <span class='glyphicon glyphicon-user'></span>  Hello</button>
+                                                           <ul class='dropdown-menu'>
+                                                                     <li><a href='profile.php'>profile</a></li>
+                                                                     <form method='post'>
+                                                                     <li><input type='submit' style='background-color:transparent;border-color: transparent;margin-left: 9px' value='Log-out'  name='log-out' /></li>
+                                                                     </form>
+                                                          </ul>
+                             </div>";
                 }
             ?>
 
@@ -150,18 +158,15 @@
       if(isset($_POST['subscribe'])){
           if(!isset($_SESSION['pass'])){
                   $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
-
                   $query = 'SELECT * FROM topic WHERE id="1" AND image="box-1.png" ';
                   $stmt = $dbh->prepare($query);
                   $stmt->execute(array(
                                        'id' => $id,
                                        'image' => $image
                                        ));
-                  
                               $_SESSION['id'] = $id;
                               $_SESSION['image'] = $image;
                               echo '<h1>hello</h1>';
-      
           }else{
                       echo'<p style="color: red;">Nothing Here</p>';
                   }
@@ -170,13 +175,13 @@
       <div class="modal-content" style='border-radius: 0;background-color:#1c1c1c'>
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" style="text-align: left;color: #c7c7c7;">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" style='color: #fff'data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Billing Info</h4>
         </div>
         <div class="modal-body">
           
-                  <!--<label for="id">Card Holder Name</label>
-                    <input type="text" id="id" name="id" value="#" /><br />
+                  <label for="id">Card Holder Name</label>
+                    <input type="text" id="id" name="id" value="" /><br />
                     <label for="password">Card Number</label>
                     <input type="password" id="password1" name="password1" /><br />
                     <label for="password2">Exp. Date</label>
@@ -184,13 +189,11 @@
                     <label for="email">CVV</label>
                     <input type="text" id="email" name="email" style='margin-left:75px;'/></br>
                     <label for="id">Zip Code</label>
-                    <input type="text" id="id" name="id" value="#" /><br />
-                    -->
+                    <input type="text" id="id" name="id" value="" /><br />
         </div>
         <div class="modal-footer">
-            <input type="submit" class="btn btn-default" value="Subscribe"  name="subscribe" />
-               
-           <button type="button"  data-dismiss="modal">Close</button>
+            <input style="background-color: #34b484;margin-top:  20px; color: #1c1c1c" type="submit" class="btn" value="Subscribe"  name="subscribe"  />
+          
         </div>
       </div>
       
