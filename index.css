@@ -1,4 +1,4 @@
-nav{
+/*nav{
     text-align:center;
     width:100%;
     position:relative;
@@ -20,7 +20,6 @@ nav ul li a {
     padding: 0em 3em;
     margin: 4px 17px;
     text-decoration:none;
-    /*border-bottom:2px solid #fff;*/
     transition-property:all .2s linear 0s;
     -moz-transition:all .2s linear 0s;
     -webkit-transition:all .2s linear 0s;
@@ -32,6 +31,60 @@ nav ul li a {
 nav ul li a:hover {
     color: #34B484;
 }
+*/
+/*NEW NAV BAR*/
+
+
+nav {
+    position:relative;
+    padding-left: 200px;
+}
+
+nav ul li a {
+    display:inline-block;
+    padding: 0em 3em;
+    margin: 4px 17px;
+    text-decoration:none;
+    transition-property:all .2s linear 0s;
+    -moz-transition:all .2s linear 0s;
+    -webkit-transition:all .2s linear 0s;
+    -o-transition:all .2s linear 0s;
+    font-size:19px;
+    color: #ffffff;
+}
+nav ul li a:hover{
+    padding: 0em 3em;
+    color: #34b484;
+    margin: 4px 17px;
+    text-decoration:none;
+    transition-property:all .2s linear 0s;
+    -moz-transition:all .2s linear 0s;
+    -webkit-transition:all .2s linear 0s;
+    -o-transition:all .2s linear 0s;
+}
+#list ul li {
+   display:inline-block;
+text-align:center;
+}
+#navo div{
+  display: inline-block;
+}
+.dropdown .btn{
+ border-radius:0px;
+ margin-left: 94px;
+}
+.dropdown .btn:hover {
+   border-radius:0px;
+   background-color:#34b484;
+   color: #fff;
+    transition-property:all .2s linear 0s;
+    -moz-transition:all .2s linear 0s;
+    -webkit-transition:all .2s linear 0s;
+    -o-transition:all .2s linear 0s;
+}
+
+
+/*NEW NAV BAR*/
 .intro{
     margin-top: 0px;
     max-width: inherit;
@@ -94,11 +147,25 @@ table{
 }
 .theme{
     font-size: 30px;
+    margin-left: 1px;
 }
-.txt,td a:hover {
+.row-3 td a{
     text-decoration: none;
     color: #c7c7c7;
+    margin-left: 2px;
     border-bottom: solid #34B484;
+}
+.row-3 td a:hover{
+    text-decoration: none;
+    color: #1c1c1c;
+    padding: 1px 1px 1px 1px;
+    border-radius: 3px;
+    border:1px solid #c7c7c7;
+    background-color: #34B484;
+    transition-property:all .1s linear 0s;
+    -moz-transition:all .1s linear 0s;
+    -webkit-transition:all .1s linear 0s;
+    -o-transition:all .1s linear 0s;
 }
 .closer{
     margin-top: 0px;
@@ -136,10 +203,15 @@ table{
 .closer h4 a:hover{
     text-decoration: none;
     border-bottom: 3px solid #34B484;
+    transition-property:all .1s linear 0s;
+    -moz-transition:all .1s linear 0s;
+    -webkit-transition:all .1s linear 0s;
+    -o-transition:all .1s linear 0s;
 }
 
 /*footer code*/
 #footer {
+    font-family: 'Montserrat', sans-serif;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
@@ -155,9 +227,7 @@ table{
 .container .text-muted {
     margin: 0 0;
 }
-.footertext {
-    color: #ffffff;
-}
+
 .col-md-3{
     margin-top: 30px;
     color: white;
@@ -179,5 +249,7 @@ table{
 .row a:hover{
     color: white;
     text-decoration: none;
+    color: #34B484;
 }
 /*footer code*/
+   

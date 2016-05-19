@@ -6,7 +6,8 @@
  * Time: 5:15 PM
  */
 session_start();
+$pass = '0000';
 
-echo "<p>welcome ".$_SESSION['email'].".</p>"
-
+$_SESSION['password'] = $pass;
+ 
 ?>

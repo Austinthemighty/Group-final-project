@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+    <?
+    session_start();
+    ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,20 +25,60 @@
     <title>Subscriptions</title>
 </head>
 <body class="prod-img prod-img-tint">
-<!-- the body shal contain the photo background-->
-<div class="nav">
-    <nav>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="products.php">Subscriptions</a></li>
-                <li><a href="profile.php">Profile</a></li>
-            </ul>
-        </nav>
-    </nav>
+    
+    <!--
+    
+    
+    
+    
+    
+    
+                                                                                FIX THE FORM 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    -->
+<!-- UPDATE NAV BAR-->
+<div id='navo' style='margin-left: 10%'>
+<div id='list'>
+<nav>
+     <ul>
+           <li><a href='index.php'>Home</a></li>
+           <li><a href='products.php'>Products</a></li>
+           <li><a href='register.php'>sign-up</a></li>
+     </ul>
+</nav> 
+</div> 
+
+            <?php
+             if(isset($_SESSION['pass'])){
+                    echo "<div class='dropdown'>
+    <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
+    <span class='glyphicon glyphicon-user'></span>  Hello</button>
+    <ul class='dropdown-menu'>
+      <li><a href='profile.php'>profile</a></li>
+      <li><a href='#'>Log-out</a></li>
+    </ul>
+  </div>";
+                }
+            ?>
+
+
 </div>
 
 <!--products-->
+
+
+<!--Put in the description of the box-->
+<!--Font white-->
+<!--PRICES-->
 <div id="pricing" class="container-fluid price-img" >
     <div class="text-center">
         <h2>Subscriptions</h2>
@@ -48,13 +91,14 @@
                     <h1>Basic</h1>
                 </div>
                 <div class="panel-body">
-                    <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
+                    <img src="images/box-1.png" style="width:400px;padding-bottom: 5px"/>
+                    <p style='color: #EBEBEB'> The Content here we offer range from an arduino uno to an SSD and also high </p>
                 </div>
                 <div class="panel-footer" style="background-color: #1c1c1c;">
-                    <h3>$19</h3>
+                    <h3>$70-$200</h3>
                     <h4>per month</h4>
-                    <button class="btn btn-lg">Subscribe</button>
+                    <!--MODAL 0-->
+                    <button type="button" class="btn " data-toggle="modal" data-target="#myModal0" style='margin-top: 10px; border-radius: 0px; background-color: #1c1c1c;border-color: #c7c7c7'>Sign Up</button>
                 </div>
             </div>
         </div>
@@ -64,13 +108,14 @@
                     <h1>Pro</h1>
                 </div>
                 <div class="panel-body">
-                    <h1>image goes here</h1>
+                    <img src="images/box-2.png" style="width: 400px;padding-bottom: 5px"/>
                     <p><strong>Discription</strong> here</p>
                 </div>
                 <div class="panel-footer">
-                    <h3>$29</h3>
+                    <h3>$200-$300</h3>
                     <h4>per month</h4>
-                    <button class="btn btn-lg">Subscribe</button>
+                      <!--MODAL 1-->
+                     <button type="button" class="btn " id='coo' data-toggle="modal" data-target="#myModal1" style='margin-top: 10px; border-radius: 0px; background-color: #1c1c1c;border-color: #c7c7c7'>Sign Up</button>
                 </div>
             </div>
         </div>
@@ -80,23 +125,211 @@
                     <h1>Premium</h1>
                 </div>
                 <div class="panel-body">
-                    <h1>image goes here</h1>
-                    <p><strong>Discription</strong> here</p>
+                    <img src="images/box-3.png" style="width: 400px;height: 345.5px;padding-bottom: 5px"/>
+                    <p style="padding-bottom:0px"><strong style="border-bottom:0px">Discription</strong> here</p>
                 </div>
                 <div class="panel-footer">
-                    <h3>$49</h3>
+                    <h3>$400-$1000</h3>
                     <h4>per month</h4>
-                    <button class="btn btn-lg">Subscribe</button>
+                    <!--MODAL 2-->
+                     <button type="button" class="btn " id='coo' data-toggle="modal" data-target="#myModal2" style='margin-top: 10px; border-radius: 0px; background-color: #1c1c1c;border-color: #c7c7c7'>Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--produvts-->
+<!--products-->
 
-<footer class="footer">
-    <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
-    <h1 style="color:#fff">footer text</h1>
-</footer>
+<!--MODAL 0-->
+  <div class="modal fade" id="myModal0" role="dialog">
+    <div class="modal-dialog">
+    
+      <?php
+      $id = '1';
+      $image= 'images/box-1.png';
+      if(isset($_POST['subscribe'])){
+          if(!isset($_SESSION['pass'])){
+                  $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
+
+                  $query = 'SELECT * FROM topic WHERE id="1" AND image="box-1.png" ';
+                  $stmt = $dbh->prepare($query);
+                  $stmt->execute(array(
+                                       'id' => $id,
+                                       'image' => $image
+                                       ));
+                  
+                              $_SESSION['id'] = $id;
+                              $_SESSION['image'] = $image;
+                              echo '<h1>hello</h1>';
+      
+          }else{
+                      echo'<p style="color: red;">Nothing Here</p>';
+                  }
+        }
+      ?>
+      <div class="modal-content" style='border-radius: 0;background-color:#1c1c1c'>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" style="text-align: left;color: #c7c7c7;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Billing Info</h4>
+        </div>
+        <div class="modal-body">
+          
+                  <!--<label for="id">Card Holder Name</label>
+                    <input type="text" id="id" name="id" value="#" /><br />
+                    <label for="password">Card Number</label>
+                    <input type="password" id="password1" name="password1" /><br />
+                    <label for="password2">Exp. Date</label>
+                    <input type="password" id="password2" name="password2" style='margin-left:75px;'/><br />
+                    <label for="email">CVV</label>
+                    <input type="text" id="email" name="email" style='margin-left:75px;'/></br>
+                    <label for="id">Zip Code</label>
+                    <input type="text" id="id" name="id" value="#" /><br />
+                    -->
+        </div>
+        <div class="modal-footer">
+            <input type="submit" class="btn btn-default" value="Subscribe"  name="subscribe" />
+               
+           <button type="button"  data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  </form>
+</div>
+<!--MODAL 0-->
+
+<!--MODAL 1-->
+ <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      
+      <div class="modal-content" style='border-radius: 0;background-color:#1c1c1c'>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" style="text-align: left;color: #c7c7c7;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          
+                    <!--<label for="id">Card Holder Name</label>
+                    <input type="text" id="id" name="id" value="#" /><br />
+                    <label for="password">Card Number</label>
+                    <input type="password" id="password1" name="password1" /><br />
+                    <label for="password2">Exp. Date</label>
+                    <input type="password" id="password2" name="password2" style='margin-left:75px;'/><br />
+                    <label for="email">CVV</label>
+                    <input type="text" id="email" name="email" style='margin-left:75px;'/></br>
+                    <label for="id">Zip Code</label>
+                    <input type="text" id="id" name="id" value="#" /><br />
+                    -->
+                    <?php
+                    echo '<p style=" color: red;">' . $_SESSION['id'] . '</p>';
+                    echo '<img src = " ' . $_SESSION['image'] . ' " style="height:100px;width:100px" />';
+                    ?>
+        </div>
+        <div class="modal-footer">
+            <input type="submit" class="btn btn-default" value="Sign Up" name="submit-sp" />
+               
+           <button type="button"  data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  </form>
+</div>
+<!--MODAL 1-->
+
+<!--MODAL 2-->
+ <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      
+      <div class="modal-content" style='border-radius: 0;background-color:#1c1c1c'>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" style="text-align: left;color: #c7c7c7;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal 2</h4>
+        </div>
+        <div class="modal-body">
+          
+                    <label for="id">Card Holder Name</label>
+                    <input type="text" id="id" name="id" value="<?php if (!empty($id)) echo $id; ?>" /><br />
+                    <label for="password">Card Number</label>
+                    <input type="password" id="password1" name="password1" /><br />
+                    <label for="password2">Exp. Date</label>
+                    <input type="password" id="password2" name="password2" style='margin-left:75px;'/><br />
+                    <label for="email">CVV</label>
+                    <input type="text" id="email" name="email" style='margin-left:75px;'/></br>
+                    <label for="id">Zip Code</label>
+                    <input type="text" id="id" name="id" value="<?php if (!empty($id)) echo $id; ?>" /><br />
+                    
+        </div>
+        <div class="modal-footer">
+            <input type="submit" class="btn btn-default" value="Sign Up" name="submit-sp" />
+               
+           <button type="button"  data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  </form>
+</div>
+<!--MODAL 2-->
+
+
+
+<!--UPDATE THE FOOTER-->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+
+            <br>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://www.facebook.com"> <img src="http://ri2.sierraclub.org/sites/ri.sierraclub.org/files/Transparent-Facebook-Logo-Icon.png"  width='20%'> </a>
+                    <br><br><br>
+
+                    <a href="index.php"> <h4 class="footertext">home<br></a>
+
+                </center>
+            </div>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://www.instagram.com/accounts/login/?force_classic_login"> </a> <img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-512.png"  width='20%'></a>
+                    <br><br><br>
+
+                    <a href="contact.php"> <h4 class="footertext">contact<br></a>
+                </center>
+            </div>
+            <div class="col-md-3" id="fot-txt" style='margin-top: 36px'>
+                <center>
+                    <a href="https://twitter.com"> <img src="https://g.twimg.com/Twitter_logo_blue.png"  width='20%'></a>
+                    <br><br><br>
+
+                    <a href="products.php"> <h4 class="footertext">subscription<br> </a>
+
+                </center>
+            </div>
+            <div class="col-md-3" id="fot-txt">
+                <center>
+                    <a href="https://www.pinterest.com"> </a> <img src="http://www.maylifestyle.com/wp-content/uploads/2013/02/icono-pinterest-color-04.png"  width='20%'></a>
+                    <br><br><br>
+
+                    <a href="register.php"> <h4 class="footertext">register<br></a>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <p><center><a href="about.php">Contact us</a> <p class="footertext">Copyright @ <span style="color:#34b484;">E-box</span> 2016</p></center></p>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -4,52 +4,45 @@
 session_start();
 
 $title = 'Register';
-require_once('connect.php');
-require_once('header.php');
 
 //-------------SIGN-UP.php-----------//
 if (isset($_POST['submit-sp'])) {
     // Grab the profile data from the POST
-    $id = trim($_POST['id']);
     $password1 = trim($_POST['password1']);
     $password2 = trim($_POST['password2']);
     $email = trim($_POST['email']);
 
-    if (!empty($id) && !empty($password1) && !empty($email) && !empty($password2) && ($password1 == $password2)) {
+    if ( !empty($password1) && !empty($email) && !empty($password2) && ($password1 == $password2)) {
         // Connect to the database
         $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
 
         // Make sure someone isn't already registered using this username
-        $query = "SELECT * FROM user WHERE id = :id, password = :password1, email = :email";
+        $query = "SELECT * FROM user WHERE password = :password1 AND email = :email";
         $stmt = $dbh->prepare($query);
         $stmt->execute(array(
-            'id' => $id,
-            'password'=>  $password1,
-            'email' => $email
+            ':password'=>  $password1,
+            ':email' => $email
         ));
         $result = $stmt->fetchAll();
         $count = $stmt->rowCount();
 
         if ($count == 0) {
             // The username is unique, so insert the data into the database
-            $query = "INSERT INTO user (id, email, password) VALUES (:id, :email, SHA(:password))";
+            $query = "INSERT INTO user ( email, password) VALUES ( :email, SHA(:password))";
             $stmt = $dbh->prepare($query);
             $stmt->execute(array(
-                'id'  =>  $id,
-                'password'=>  $password1,
-                'email' => $email
+                ':password'=>  $password1
             ));
 
             $_SESSION['pass'] = $password1;
 
             // Confirm success with the user
-            echo "<p>Your new account has been successfully ". $id ." created. You're now ready to <a href='register.php'>log in</a>.</p>";
+            echo "<p style='color:red'>Your new account has been successfully ". $email ." created. You're now ready to <a href='register.php'>log in</a>.</p>";
             exit();
         }
         else {
             // An account already exists for this username, so display an error message
             echo '<p class="error">An account already exists for this username. Please use a different address.</p>';
-            $id = "";
         }
     }
     else {
@@ -63,7 +56,7 @@ if (isset($_POST['submit-sp'])) {
 if(isset($_POST['submit-ln'])){
     //grabbing profile data from the POST
     $email = trim($_POST['email']);
-    $password = trim($_POST['password1']);
+    $password1 = trim($_POST['password1']);
 
     if(!empty($email) && !empty($password)) {
         //connection to database
@@ -81,23 +74,22 @@ if(isset($_POST['submit-ln'])){
             $query = "SELECT * FROM user (email, password) VALUES (:email, SHA(:password1))";
             $stmt = $dbh->prepare($query);
             $stmt->execute(array(
-                'email' => $email,
-                'password' => $password1
+                ':password' => $password1
             ));
 
-            $_SESSION['email'] = $email;
+            $_SESSION['pass'] = $password1;
 
             // Confirm success with the user
             echo "<p>You're signed in " . $email . ".</p>";
             exit();
         } else {
             // An account already exists for this username, so display an error message
-            echo '<p class="error">Please enter all the information for proper log-in.</p>';
+            echo '<p class="error" style="text-align: left;color:white">Please enter all the information for proper log-in.</p>';
             $id = "";
         }
     }
     else {
-            echo"<p>No information inserted!</p>";
+            echo"<p style='text-align: left;color:white'>No information inserted!</p>";
         }
 
         //switch around the if else in the if with the $count var and use the true statement to set up a $_SESSION to save around the site
@@ -120,64 +112,110 @@ if(isset($_POST['submit-ln'])){
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+   
     <title>Register</title>
 </head>
-<body style='background-image: url("https://pbs.twimg.com/media/CXVbrKjWcAASgHz.jpg");background-repeat: no-repeat;'>
+<body class='reg-bckgrnd'>
+    <div class="'register" style="background-color: #1c1c1c;margin-left:170px;margin-right:170px;height: 520px">
+    <!--UPDATE NAV BAR-->
+ <!--<nav>
+        <ul>
+           
+            <li><a href="index.php">Home</a></li>
+            <li><a href="products.php">Subscriptions</a></li>
+            <li><a href="register.php">Sign-Up</a></li>
+        </ul>
+    </nav>
+-->
+ 
+ 
+ <!-- NEW NAV BAR-->
+<div id='navo'>
+<div id='list'>
 <nav>
-    <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="products.php">Subscriptions</a></li>
-        <li><a href="profile.php">Profile</a></li>
-    </ul>
-</nav>
+     <ul>
+           <li><a href='index.php'>Home</a></li>
+           <li><a href='products.php'>Products</a></li>
+           <li><a href='register.php'>sign-up</a></li>
+     </ul>
+</nav> 
+</div> 
 
+            <?php
+             if(isset($_SESSION['pass'])){
+                    echo "<div class='dropdown'>
+    <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
+    <span class='glyphicon glyphicon-user'></span>  Hello</button>
+    <ul class='dropdown-menu'>
+      <li><a href='profile.php'>profile</a></li>
+      <li><a href='#'>Log-out</a></li>
+    </ul>
+  </div>";
+                }
+            ?>
+
+
+</div>
+
+ <!-- NEW NAV BAR-->
+
+
+<style>
+.register{    
+    background-color: #c1c1c1;
+}
+</style>
 
 
 <!---                                       REGISTER.PHP                                                             -->
-
+<!--add background color->
 <div class="reg-table" style="width: 899px;height: 320px;margin-left: 300px;margin-top: 112px">
 <!--Log-in HTML-->
-    <table id="regtab" style="width:80%;padding-left: 10%;margin-left: 200px;text-align: left">
+
+    <table id="regtab" style="width:40%;padding-left: 10%;margin-left: 350px;text-align: left; padding-bottom: 60px;margin-bottom: 60px">
         <tr>
             <td>
-                <h1>Log-in</h1>
+                <h1 style="margin-top: 90px">Log-in</h1>
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" style="text-align: left">
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email" value="<?php if (!empty($id)) echo $id; ?>" /><br />
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password1" /><br />
-                    <input type="submit" value="Sign Up" name="submit-ln" />
+                    <input type="password" id="password" name="password1" />
+                    <br />
+                    <input style="margin-top: 10px;" type="submit" value="Sign Up" name="submit-ln" />
                 </form>
-                </div>
                 <!--Log-in HTML-->
             </td>
             <td>
-
+<!--margin -left 30px-->
                 <!--Sign-up HTML-->
-                <h1>Sign-up</h1>
-                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
-                    <label for="id">Username:</label>
-                    <input type="text" id="id" name="id" value="<?php if (!empty($id)) echo $id; ?>" /><br />
+                <h1 style="margin-top: 90px;margin-left: 60px;">Sign-up</h1>
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" style="text-align: left;margin-left: 60px;">
+                    
+                    <label style='margin-bottom: 0px'for="email">email:</label>
+                    <input type="text" id="email" name="email" style='margin-left:75px;'/></br>
+                    
                     <label for="password">Password:</label>
-                    <input type="password" id="password1" name="password1" /><br />
+                    <input type="password" id="password1" name="password1" style="margin-top: 10px"/><br />
+                    
                     <label for="password2">Password (retype):</label>
-                    <input type="password" id="password2" name="password2" /><br />
-                    <label for="email">email:</label>
-                    <input type="text" id="email" name="email" /></br>
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Sign Up</button>
+                    <input type="password" id="password2" name="password2" style='margin-left:75px;'/><br />
+                    
+                    
+                    
+                    <input type="submit" value="Sign in" name="submit-sp" />
                 </form>
             </td>
         </tr>
     </table>
 </div>
 
-<<<<<<< HEAD
+
+<!--UPDATE FOOTER-->
 <div id="footer">
     <div class="container">
         <div class="row">
@@ -185,7 +223,7 @@ if(isset($_POST['submit-ln'])){
             <br>
             <div class="col-md-3" id="fot-txt">
                 <center>
-                    <a href="https://www.facebook.com"> <img src="http://ri2.sierraclub.org/sites/ri.sierraclub.org/files/Transparent-Facebook-Logo-Icon.png"  width='12%'> </a>
+                    <a href="https://www.facebook.com"> <img src="http://ri2.sierraclub.org/sites/ri.sierraclub.org/files/Transparent-Facebook-Logo-Icon.png"  width='20%'> </a>
                     <br><br><br>
 
                     <a href="index.php"> <h4 class="footertext">home<br></a>
@@ -194,15 +232,15 @@ if(isset($_POST['submit-ln'])){
             </div>
             <div class="col-md-3" id="fot-txt">
                 <center>
-                    <a href="https://www.instagram.com/accounts/login/?force_classic_login"> </a> <img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-512.png"  width='12%'></a>
+                    <a href="https://www.instagram.com/accounts/login/?force_classic_login"> </a> <img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-512.png"  width='20%'></a>
                     <br><br><br>
 
-                    <a href="register.php"> <h4 class="footertext">register<br></a>
+                    <a href="contact.php"> <h4 class="footertext">contact<br></a>
                 </center>
             </div>
-            <div class="col-md-3" id="fot-txt">
+            <div class="col-md-3" id="fot-txt" style='margin-top: 36px'>
                 <center>
-                    <a href="https://twitter.com"> <img src="https://g.twimg.com/Twitter_logo_blue.png"  width='12%'></a>
+                    <a href="https://twitter.com"> <img src="https://g.twimg.com/Twitter_logo_blue.png"  width='20%'></a>
                     <br><br><br>
 
                     <a href="products.php"> <h4 class="footertext">subscription<br> </a>
@@ -211,7 +249,7 @@ if(isset($_POST['submit-ln'])){
             </div>
             <div class="col-md-3" id="fot-txt">
                 <center>
-                    <a href="https://www.pinterest.com"> </a> <img src="http://www.maylifestyle.com/wp-content/uploads/2013/02/icono-pinterest-color-04.png"  width='12%'></a>
+                    <a href="https://www.pinterest.com"> </a> <img src="http://www.maylifestyle.com/wp-content/uploads/2013/02/icono-pinterest-color-04.png"  width='20%'></a>
                     <br><br><br>
 
                     <a href="register.php"> <h4 class="footertext">register<br></a>
@@ -223,42 +261,6 @@ if(isset($_POST['submit-ln'])){
         </div>
     </div>
 </div>
-=======
-<div class="container">
-  <h2>Modal Example</h2>
-  
-  
-
-  
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-
-
-
-<footer class="footer" style="background-color: #373B43">
-    <!--containing glyphicons of facebook, twitter, instgram, and pintrest-->
-    <h1 style="color:#fff">footer text</h1>
-</footer>
->>>>>>> 4f9066c18e5c9641668cf54cc0886bd2b7bfeb02
 </body>
     <!--Sign-up HTML-->
 </html>
