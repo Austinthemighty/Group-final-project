@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-    <?
+    <?php
     session_start();
+
+
     if(isset($_POST['log-out'])){
     if(isset($_SESSION['pass'])){
       unset($_SESSION['pass']);
-    }else{
-      echo "<h1 style='color: red'>Nothing here</h1>";
     }
   }
     ?>
@@ -31,26 +31,7 @@
     <title>Subscriptions</title>
 </head>
 <body class="prod-img prod-img-tint">
-    
-    <!--
-    
-    
-    
-    
-    
-    
-                                                                                FIX THE FORM 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    -->
+
 <!-- UPDATE NAV BAR-->
 <div id='navo' style='margin-left: 10%'>
 <div id='list'>
@@ -64,7 +45,7 @@
 </div> 
 
             <?php
-             if(isset($_SESSION['pass'])){
+             if(!isset($_SESSION['pass'])){
                     echo "<div class='dropdown'>
                                       <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
                                                 <span class='glyphicon glyphicon-user'></span>  Hello</button>
@@ -160,11 +141,8 @@
                   $dbh = new PDO('mysql:host=localhost;dbname=e-box', 'root', 'root');
                   $query = 'SELECT * FROM topic WHERE id="1" AND image="box-1.png" ';
                   $stmt = $dbh->prepare($query);
-                  $stmt->execute(array(
-                                       'id' => $id,
-                                       'image' => $image
-                                       ));
-                              $_SESSION['id'] = $id;
+                  $stmt->execute();
+                $_SESSION['id'] = $id;
                               $_SESSION['image'] = $image;
                               echo '<h1>hello</h1>';
           }else{

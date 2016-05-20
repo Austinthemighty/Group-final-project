@@ -3,6 +3,7 @@
 
   session_start();
 
+
   if(isset($_POST['log-out'])){
     if(isset($_SESSION['pass'])){
       unset($_SESSION['pass']);
@@ -63,7 +64,7 @@
                                                            <ul class='dropdown-menu'>
                                                                      <li><a href='profile.php'>profile</a></li>
                                                                      <form method='post'>
-                                                                     <li><input type='submit' style='background-color:transparent;border-color: transparent;margin-left: 9px' value='Log-out'  name='log-out' /></li>
+                                                                     <li><input type='submit' style='background-color:transparent;border-color:transparent;margin-left: 9px' value='Log-out'  name='log-out' /></li>
                                                                      </form>
                                                           </ul>
                              </div>";
@@ -91,7 +92,6 @@
                       echo'<h1>Nothing</h1>';
                     }
                     ?>
-                    <h2 style='color:#e0e0e0'>Pro</h2>
                 </div>
                 <div class="panel-body">
                       <?php
@@ -111,6 +111,7 @@
         </div>
     </div>
 </div>
+
 <!--UPDATE FOOTER-->
 <div id="footer">
     <div class="container">

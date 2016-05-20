@@ -26,8 +26,8 @@ if (isset($_POST['submit-sp'])) {
         $query = "SELECT * FROM user WHERE password = :password1 AND email = :email";
         $stmt = $dbh->prepare($query);
         $stmt->execute(array(
-            ':password'=>  $password1,
-            ':email' => $email
+            'password'=>  $password1,
+            'email' => $email
         ));
         $result = $stmt->fetchAll();
         $count = $stmt->rowCount();
@@ -37,9 +37,10 @@ if (isset($_POST['submit-sp'])) {
             $query = "INSERT INTO user ( email, password) VALUES ( :email, SHA(:password))";
             $stmt = $dbh->prepare($query);
             $stmt->execute(array(
-                ':password'=>  $password1
+                ':password'=>  $password1,
+                ':email'=> $email
             ));
-
+                $_SESSION['pass'] = $password1;
             // Confirm success with the user
             echo "<p style='color:red'>Your new account has been successfully ". $email ." created. You're now ready to <a href='register.php'>log in</a>.</p>";
             exit();
@@ -150,7 +151,7 @@ if(isset($_POST['submit-ln'])){
 </div> 
 
             <?php
-             if(isset($_SESSION['pass'])){
+             if(!isset($_SESSION['pass'])){
                     echo "<div class='dropdown'>
                                       <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
                                                 <span class='glyphicon glyphicon-user'></span>  Hello</button>
@@ -188,9 +189,9 @@ if(isset($_POST['submit-ln'])){
                 <h1 style="margin-top: 90px">Log-in</h1>
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" style="text-align: left">
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" value="<?php if (!empty($id)) echo $id; ?>" /><br />
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password1" />
+                    <input type="text" id="email" name="email" value="<?php if (!empty($email)) echo $email; ?>" /><br />
+                    <label for="password1">Password:</label>
+                    <input type="password" id="password1" name="password1" />
                     <br />
                     <input style="margin-top: 10px;" type="submit" value="Sign Up" name="submit-ln" />
                 </form>
